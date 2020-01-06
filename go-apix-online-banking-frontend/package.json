@@ -1,7 +1,8 @@
 {
     "name": "go-apix-online-banking-frontend",
     "version": "1.0.2",
-    "description": "Packages used by Angular",
+    "description": "GO APIX https://apixplatform.com/go-apix/home",
+    "author": "Dinuth De Zoysa",
     "scripts": {
         "ng": "ng",
         "start": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng serve",

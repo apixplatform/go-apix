@@ -1,6 +1,8 @@
 {
   "name": "go-apix-front-office-frontend",
   "version": "1.0.4",
+  "description": "GO APIX https://apixplatform.com/go-apix/home",
+  "author": "Dinuth De Zoysa",
   "private": true,
   "scripts": {
     "ng": "ng",
