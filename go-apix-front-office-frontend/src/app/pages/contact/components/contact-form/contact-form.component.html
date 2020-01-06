@@ -1,0 +1,70 @@
+<!-- ./Contact Us -->
+<section class="section mt-7n">
+  <div class="container bring-to-front pt-0">
+    <div class="row align-items-center gap-y">
+      <div class="col-md-6">
+        <div class="shadow bg-contrast p-4 rounded">
+          <dc-form-contact></dc-form-contact>
+        </div>
+      </div>
+
+      <div class="col-md-5 ml-md-auto">
+        <div class="section-heading">
+          <dc-badge [bg]="'info'" [text]="'contrast'" [small]
+            >Let's do business</dc-badge
+          >
+          <h2>Step into our place</h2>
+        </div>
+
+        <div class="media">
+          <fa-icon
+            [icon]="fa.mapMarker"
+            [class]="'font-l text-primary mr-3'"
+          ></fa-icon>
+          <div class="media-body">
+            123 Street St, Your City,<span class="d-block">YC Country</span>
+          </div>
+        </div>
+
+        <div class="media my-4">
+          <fa-icon
+            [icon]="fa.phone"
+            [class]="'font-l text-primary mr-3'"
+          ></fa-icon>
+          <div class="media-body">
+            <span class="d-block"
+              ><a href="tel:+1-123-456-7890">(123) 456-7890</a></span
+            >
+            <span class="d-block"
+              ><a href="tel:+1-987-654-3201">(987) 654-3201</a></span
+            >
+          </div>
+        </div>
+
+        <div class="media">
+          <fa-icon
+            [icon]="fa.envelope"
+            [class]="'font-l text-primary mr-3'"
+          ></fa-icon>
+          <div class="media-body">
+            <a href="mailto:support@apixplatform.com">support@apixplatform.com</a>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <nav class="nav justify-content-center justify-content-md-start">
+          <a href="#" class="btn btn-circle btn-sm brand-facebook mr-3">
+            <fa-icon [icon]="fa.facebook"></fa-icon>
+          </a>
+          <a href="#" class="btn btn-circle btn-sm brand-twitter mr-3">
+            <fa-icon [icon]="fa.twitter"></fa-icon>
+          </a>
+          <a href="#" class="btn btn-circle btn-sm brand-instagram">
+            <fa-icon [icon]="fa.instagram"></fa-icon>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>

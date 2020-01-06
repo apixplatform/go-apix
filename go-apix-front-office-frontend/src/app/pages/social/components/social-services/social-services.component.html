@@ -1,0 +1,30 @@
+<!-- ./Services -->
+<section class="section bg-light edge top-left">
+  <div class="container bring-to-front">
+    <div class="section-heading text-center">
+      <h2>What <span class="bold">We Offer</span></h2>
+      <p class="text-secondary lead">
+        DashCore is a complete set of design and developing tools. Either your
+        business is just starting or have years on the market, you can take
+        advantage of it.
+      </p>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <div
+        *ngFor="let card of cards; let i = index"
+        class="card shadow-lg off-left-background border-0 {{ card.class }}"
+        [class.mr-3]="i < cards.length"
+      >
+        <div class="card-body p-md-5 text-center">
+          <fa-icon
+            [icon]="card.icon.name"
+            size="2x"
+            [class]="card.icon.class"
+          ></fa-icon>
+          <p class="bold {{ card.title.class }}">{{ card.title.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

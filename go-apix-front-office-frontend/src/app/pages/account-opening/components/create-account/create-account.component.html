@@ -1,0 +1,126 @@
+<!-- Integration Heading -->
+<header class="header page business-header section img-bg">
+  <div class="container pb-8">
+    <div class="row">
+      <div class="col-md-10 mx-auto text-center">
+        <h1 class="text-center mt-4">
+          Create your Account
+        </h1>
+
+        <p class="lead text-contrast my-5 op-8">
+          Create your account and get started with your financial journey with
+          Go APIX today!
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <section>
+    <div class="col-md-12 pt-5 pb-5">
+      <h2 class="bold">
+        Now, let’s create your account
+      </h2>
+      <h5>
+        Please fill the form below
+      </h5>
+    </div>
+
+    <div class="col-md-12 pb-4">
+      <form class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up">
+        <div class="row">
+          <div class="col-md-6 pr-md-5 mb-5">
+            <h4 class="mb-4">Account Details</h4>
+            <div class="form-group">
+              <label class="bold">Account Holder’s Name</label>
+              <input type="text" class="form-control bg-contrast" [(ngModel)]="accountHolderName"
+                name="accountHolderName" required />
+            </div>
+            <div class="form-group">
+              <label class="bold">Select Account Scheme</label>
+              <select class="form-control" (change)="onOptionsSelected($event.target.value)">
+                <option disabled>Select Scheme</option>
+                <option *ngFor="let scheme of schemes; let i = index" value="{{ i }}">{{ scheme }}</option>
+              </select>
+            </div>
+            <!-- <div class="form-group">
+              <label class="bold">Include Card Facility</label> <br />
+              <input type="radio" name="facility" value="Y" [(ngModel)]="cardFacility" />
+              Yes<br />
+              <input type="radio" name="facility" value="N" [(ngModel)]="cardFacility" />
+              No<br />
+
+            </div> -->
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="cardFacility" name="cardFacility"
+                [(ngModel)]="cardFacility" />
+              <label class="form-check-label bold" for="exampleCheck1">Include Card Facility</label>
+            </div>
+          </div>
+          <div class="col-md-6 pl-md-5 mb-5">
+            <h4 class="mb-4">Online Banking Account Details</h4>
+            <!-- <div class="form-group">
+          <label class="bold">NickName</label>
+          <input type="text" class="form-control bg-contrast" [(ngModel)]="nickName" name="nickName" required />
+        </div> -->
+
+            <div class="form-group">
+              <label class="bold">Email</label>
+              <input type="text" class="form-control bg-contrast" [(ngModel)]="email" name="email" #emailFieldInput
+                required />
+              <span class="badge badge-success" *ngIf="validEmail">Valid Email</span>
+              <span class="badge badge-danger" *ngIf="invalidEmail">Invalid Email</span>
+              <span class="badge badge-danger" *ngIf="emailBlacklisted">Blacklisted Email</span>
+            </div>
+            <div class="form-group">
+              <label class="bold">Password</label>
+              <input type="password" class="form-control bg-contrast" [(ngModel)]="password" name="password"
+                (input)="onPasswordEnter($event.target.value)" required />
+            </div>
+            <div class="form-group">
+              <label class="bold">Confirm Password</label>
+              <input type="password" class="form-control bg-contrast" [(ngModel)]="confirmPassword"
+                name="confirmPassword" (input)="onPasswordEnter($event.target.value)" required />
+              <span class="badge badge-success" *ngIf="passwordValid">Password Valid</span>
+              <span class="badge badge-danger" *ngIf="passwordInvalid">Password does not match</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <!-- <div class="col-12 col-lg-4 p-0 mb-2" *ngIf="hasErrors">
+                <div class="bg-danger text-white lead p-1">
+                  {{ errorMessage }}
+                </div>
+                 <div class="bg-success text-white lead p-1">error message</div> 
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group mt-5 col-md-6">
+            <button name="submit" type="button" class="btn btn-primary btn-rounded mr-2" (click)="submitInfo()"
+              [disabled]="!(emailValidated && passwordValid)">
+              Create Account
+            </button>
+            <div class="spinner-border spinner-border-sm ml-1 mr-1" role="status" *ngIf="loading">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <button name="submit" type="submit" class="btn btn-outline-primary btn-rounded mr-2 ml-2">
+              Cancel
+            </button>
+          </div>
+          <div class="col-md-6 pt-5 pb-5 powered-by">
+            <small>Powered by: </small>
+            <img src="./assets/img/logos/companies/mambu.png" class="pl-2 logo">
+            <img src="./assets/img/logos/companies/smartbank.png" class="pl-2 logo">
+            <img src="./assets/img/logos/companies/uppsala.png" class="pl-2 logo">
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+</div>
+
+<dc-footer1></dc-footer1>

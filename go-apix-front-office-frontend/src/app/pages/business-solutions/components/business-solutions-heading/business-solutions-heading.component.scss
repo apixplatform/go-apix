@@ -1,0 +1,15 @@
+@import "user/variables";
+@import "user/styles.scss";
+
+.img-bg {
+  text-align: center;
+  background-image: url(/assets/img/bg/business-solutions.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.header-logo {
+  max-width: 130px;
+  margin: 0 auto;
+}

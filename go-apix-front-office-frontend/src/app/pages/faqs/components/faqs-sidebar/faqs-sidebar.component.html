@@ -1,0 +1,33 @@
+<h5 class="bold small text-uppercase mb-3">search</h5>
+<form class="form search-box">
+  <div class="input-group">
+    <input
+      type="email"
+      name="Search[q]"
+      class="form-control rounded-circle-left shadow-none"
+      placeholder="Search form..."
+      required
+    />
+
+    <div class="input-group-append">
+      <button
+        class="btn btn-rounded btn-contrast border-input border-left-0"
+        type="submit"
+        data-loading-text="Searching ..."
+      >
+        <fa-icon [icon]="search"></fa-icon>
+      </button>
+    </div>
+  </div>
+</form>
+
+<h4 class="bold small text-uppercase mt-4 mb-3">categories</h4>
+<nav class="nav flex-column font-sm">
+  <a class="pl-0 nav-item nav-link bold active" [routerLink]="['/faqs']"
+    >Common Questions</a
+  >
+  <a class="pl-0 nav-item nav-link" [routerLink]="['/faqs']">Getting Started</a>
+  <a class="pl-0 nav-item nav-link" [routerLink]="['/faqs']">My Account</a>
+  <a class="pl-0 nav-item nav-link" [routerLink]="['/faqs']">Integrations</a>
+  <a class="pl-0 nav-item nav-link" [routerLink]="['/faqs']">Licencing</a>
+</nav>

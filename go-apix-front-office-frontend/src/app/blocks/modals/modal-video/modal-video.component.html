@@ -1,0 +1,17 @@
+<a href="javascript:;" (click)="videoModal.open()">
+  <ng-content></ng-content>
+</a>
+<ngx-smart-modal
+  #videoModal
+  [identifier]="identifier"
+  [customClass]="getCustomClass()"
+>
+  <div class="video-container">
+    <iframe
+      [src]="videoUrl"
+      frameborder="0"
+      class="video-iframe"
+      allowfullscreen
+    ></iframe>
+  </div>
+</ngx-smart-modal>

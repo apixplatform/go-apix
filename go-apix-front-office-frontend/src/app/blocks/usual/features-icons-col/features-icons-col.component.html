@@ -1,0 +1,26 @@
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-heading mb-6 text-center">
+      <h5 class="text-primary bold small text-uppercase">Design better</h5>
+      <h2>We design to fit all your needs</h2>
+    </div>
+
+    <div class="row gap-y text-center text-md-left">
+      <div
+        class="col-md-4 py-4 rounded shadow-hover"
+        *ngFor="let element of elements"
+      >
+        <dc-feather
+          [name]="element.icon"
+          [iconClass]="'stroke-primary'"
+        ></dc-feather>
+        <h5 class="bold mt-3">{{ element.title }}</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores
+          ea fugiat nesciunt quisquam. Assumenda dolore error nulla pariatur
+          voluptatem?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

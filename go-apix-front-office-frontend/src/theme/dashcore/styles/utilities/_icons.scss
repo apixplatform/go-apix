@@ -1,0 +1,23 @@
+.icon-shape {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .shape,
+  .shape-lg {
+    max-width: $font-size-large;
+  }
+
+  .shape-xl {
+    max-width: $font-size-extra-large;
+  }
+
+  .shape-xxl {
+    max-width: $font-size-xx-large;
+  }
+
+  .icon {
+    margin: 0;
+  }
+}

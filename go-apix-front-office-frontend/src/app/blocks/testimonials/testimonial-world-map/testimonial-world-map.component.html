@@ -1,0 +1,82 @@
+<section class="section shape-testimonials edge bg-light top-left">
+  <div class="shape-wrapper">
+    <svg
+      class="shape h-100"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 249.28 253.71"
+    >
+      <g id="Capa_2" data-name="Capa 2">
+        <g id="OBJECTS">
+          <path
+            class="cls-1"
+            d="M236.5,78.38a75.26,75.26,0,0,0-7.74-9.67l0,0S182.91,16.47,105.14,2l0,0A83.91,83.91,0,0,0,4.53,69.71C-11.34,147,19.55,209,19.73,209.4a75,75,0,0,0,6,10.77c19.06,28.33,54.33,39.57,86.73,30.43,0,0,52.47-12.9,111.35-71.37h0C251.68,152.56,257.84,110.1,236.5,78.38Z"
+          />
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container bring-to-front">
+    <div class="row">
+      <div class="col-lg-6 ml-lg-auto">
+        <div class="section-heading text-center text-lg-left">
+          <h2 class="bold">We've heard our customers say</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-md-6 order-sm-last">
+        <div
+          class=" image-background contain"
+          style="background-image: url(assets/img/shps/map-dots.svg);"
+        >
+          <div class="user-reviews" id="user-review-nav">
+            <a
+              href="javascript:;"
+              class="review absolute user nav-item"
+              *ngFor="let review of reviews; let i = index"
+              [class.active]="i === currentSlide"
+              [ngStyle]="{
+                left: review.position.left,
+                top: review.position.top
+              }"
+              [attr.data-step]="i"
+              (click)="updateSlider(i)"
+            >
+              <div class="text">
+                <img
+                  [src]="'assets/img/avatar/' + (i + 1) + '.jpg'"
+                  class="img-responsive shadow rounded-circle"
+                  alt="..."
+                  data-aos="zoom-in"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <swiper [index]="currentSlide" (indexChange)="onIndexChange($event)">
+          <div class="swiper-slide" *ngFor="let review of reviews">
+            <blockquote>
+              <i class="quote fas fa-quote-left"></i>
+              <p class="lead bold">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium,totam rem aperiam.
+              </p>
+
+              <hr class="w-10 mt-5" />
+              <div class="small">
+                <span class="bold d-block">Jane Doe,</span>
+                Marketing Director
+              </div>
+            </blockquote>
+          </div>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</section>

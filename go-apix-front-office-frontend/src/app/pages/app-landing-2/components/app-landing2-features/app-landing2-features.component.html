@@ -1,0 +1,23 @@
+<!-- Features -->
+<section class="section mt-6n" id="features">
+  <div class="container pt-0">
+    <div class="bg-contrast shadow rounded p-5">
+      <div class="row gap-y">
+        <div class="col-md-4" *ngFor="let feature of features">
+          <div
+            class="rounded gradient gradient-primary-light icon-xl shadow d-flex align-items-center justify-content-center mr-3"
+          >
+            <dc-feather
+              [name]="feature.icon"
+              [iconClass]="'stroke-contrast'"
+            ></dc-feather>
+          </div>
+          <h4 class="semi-bold mt-4 text-capitalize">{{ feature.title }}</h4>
+
+          <hr class="w-25 bw-2 border-alternate mt-3 mb-4" />
+          <p class="regular text-muted">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

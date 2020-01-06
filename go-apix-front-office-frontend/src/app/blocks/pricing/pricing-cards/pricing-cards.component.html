@@ -1,0 +1,53 @@
+<section>
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2 class="mb-2">Simple and affordable prices</h2>
+      <p class="lead text-secondary">
+        Try Dashcore Pro for 14 days. No credit card required!.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mt-5" *ngFor="let plan of plans">
+        <div class="card text-center">
+          <div
+            [class]="
+              'pricing card-header d-flex align-items-center flex-column ' +
+              (plan.best
+                ? 'bg-primary-gradient text-contrast'
+                : 'bg-light-gradient')
+            "
+          >
+            <h4 [class.text-contrast]="plan.best">{{ plan.plan.name }}</h4>
+
+            <div class="pricing-value">
+              <span class="price bold">{{ plan.plan.price }}</span>
+            </div>
+
+            <p>{{ plan.plan.description }}</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li
+              class="list-group-item {{ feature.class }}"
+              *ngFor="let feature of plan.features"
+            >
+              {{ feature.name }}
+            </li>
+          </ul>
+
+          <div class="card-body">
+            <a
+              href="javascript:;"
+              class="btn {{
+                plan.best ? 'btn-primary' : 'btn-outline-secondary'
+              }}"
+            >
+              Buy now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

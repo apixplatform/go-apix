@@ -1,0 +1,25 @@
+<section>
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2>All our plans include</h2>
+      <p class="lead text-secondary">
+        Get access to a ton of features out of the box
+      </p>
+    </div>
+
+    <div class="row gap-y text-center text-md-left">
+      <div class="col-md-4" *ngFor="let feature of features">
+        <dc-feather
+          [name]="feature.icon"
+          [iconClass]="'stroke-info'"
+          class="mr-2 m-0"
+        ></dc-feather>
+        <h5 class="bold my-3">{{ feature.title }}</h5>
+        <p class="my-0">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+          atque beatae dicta dolores hic porro quam voluptatibus.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

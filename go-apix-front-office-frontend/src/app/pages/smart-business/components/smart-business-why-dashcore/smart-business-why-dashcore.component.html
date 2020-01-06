@@ -1,0 +1,42 @@
+<section class="section">
+  <div class="container">
+    <div class="row gap-y align-items-center">
+      <div class="col-md-6">
+        <div class="section-heading">
+          <p class="text-primary bold small text-uppercase">some reasons</p>
+          <h2 class="bold">Why Choose DashCore?</h2>
+        </div>
+
+        <p class="regular">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci,
+          architecto asperiores dignissimos doloribus dolorum eos esse eum
+          laborum minima molestias, natus nostrum odio quia recusandae rem sequi
+          similique velit.
+        </p>
+
+        <a
+          href="javascript:;"
+          class="btn btn-outline-primary btn-rounded bw-2 mt-4"
+          >Read More</a
+        >
+      </div>
+
+      <div class="col-md-6">
+        <div class="animate-bars">
+          <ul class="progress-bars whyus-progress-bars progress-horizontal">
+            <li *ngFor="let bar of bars">
+              <p>
+                {{ bar.label }}<span>{{ bar.value }}%</span>
+              </p>
+              <ngb-progressbar
+                type="primary"
+                [value]="bar.value"
+                height="4px"
+              ></ngb-progressbar>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

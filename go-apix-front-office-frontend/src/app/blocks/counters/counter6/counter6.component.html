@@ -1,0 +1,26 @@
+<!-- Implementation Counters -->
+<section
+  class="section image-background contain center-bottom"
+  style="background-image: url(assets/img/shps/map-dots.svg)"
+>
+  <div class="container">
+    <div class="text-center mb-6">
+      <span class="rounded-pill badge badge-info bold px-4 py-2 mb-4"
+        >1M+ Successfully Implementations</span
+      >
+      <h2 class="bold">Get the very best of us by doing the best of you</h2>
+    </div>
+
+    <div class="row gap-y">
+      <div class="col-6 col-md-3" *ngFor="let c of counters">
+        <p
+          class="counter regular text-primary font-md display-md-4 my-0"
+          [countUp]="c.value"
+        >
+          {{ c.value }}
+        </p>
+        <p class="text-secondary regular m-0">{{ c.title }}</p>
+      </div>
+    </div>
+  </div>
+</section>

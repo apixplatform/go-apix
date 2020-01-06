@@ -1,0 +1,61 @@
+<header
+  class="header page section blanket gradient gradient-purple-blue alpha-8 text-contrast image-background cover"
+  style="background-image: url(assets/img/bg/waves.jpg)"
+>
+  <div class="divider-shape">
+    <!-- waves divider -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1000 100"
+      preserveAspectRatio="none"
+      class="shape-waves"
+      style="left: 0; transform: rotate3d(0,1,0,180deg);"
+    >
+      <path
+        class="shape-fill shape-fill-contrast"
+        d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"
+      />
+    </svg>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row gap-y align-items-center">
+      <div class="col-lg-5 mx-auto text-center text-lg-left">
+        <h1 class="light display-4 text-contrast">
+          Delivering the tools
+          <span class="bold d-block">you need to succeed</span>
+        </h1>
+        <p class="text-contrast lead my-5">
+          It all begins by choosing the right tools, start with a complete set
+          of design blocks to achieve your next success.
+        </p>
+
+        <a
+          [routerLink]="['/auth/register']"
+          class="btn btn-contrast btn-lg btn-rounded bold px-5 bw-2 border-primary"
+          >Try it free</a
+        >
+      </div>
+
+      <div class="col-lg-6 col-md-9 mx-md-auto mx-lg-0 pr-lg-0">
+        <div class="device-twin align-items-center mt-4 mt-lg-0">
+          <div class="browser shadow" data-aos="fade-left">
+            <img src="assets/img/screens/dash/4.png" alt="..." />
+          </div>
+
+          <div
+            class="front iphone-x absolute d-none d-lg-block"
+            data-aos="fade-right"
+            style="left: -5.5rem; bottom: -3.5rem;"
+          >
+            <div class="screen">
+              <img src="assets/img/screens/app/1.png" alt="..." />
+            </div>
+
+            <div class="notch"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

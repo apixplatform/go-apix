@@ -1,0 +1,43 @@
+<header
+  class="header section gradient gradient-purple-navy alpha-8 text-contrast blanket parallax cover"
+  style="background-image: url(assets/img/bg/sunrise.jpg);"
+>
+  <div class="container-fluid pb-9">
+    <div class="row text-center">
+      <div class="col-12 col-lg-6 mx-auto">
+        <img src="assets/img/logo-light.png" alt="" />
+
+        <h1
+          class="text-contrast bold display-4 display-md-3 text-capitalize mt-5"
+        >
+          Meet DashCore
+        </h1>
+        <p class="lead bold">
+          Powerful Responsive SaaS, Startup & Software Template
+        </p>
+
+        <nav class="nav d-flex justify-content-center mb-5 mt-7">
+          <a
+            href="https://themeforest.net/item/dashcore-saas-startup-software-template/22397137"
+            class="btn btn-rounded btn-success px-4 mr-2 mr-md-5"
+            >Buy now
+            <fa-icon [icon]="fa.longArrowAltRight" class="ml-2"></fa-icon>
+          </a>
+          <a
+            class="btn btn-rounded btn-outline-light px-4 mr-md-4"
+            [ngx-scroll-to]="'#demos'"
+            href="javascript:;"
+            >Explore demos</a
+          >
+
+          <a
+            [routerLink]="['/changelog']"
+            target="_blank"
+            class="btn btn-rounded px-4 btn-contrast mt-2 mt-md-0"
+            >Review Changelog</a
+          >
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

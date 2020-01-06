@@ -1,0 +1,28 @@
+<section id="features" class="section features">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2 class="bold">Premium features</h2>
+      <p class="lead text-secondary">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nulla,
+        voluptates. Architecto eum minima necessitatibus quo reiciendis! Aliquam
+        culpa doloremque eaque esse illo, nemo nesciunt nobis quia sapiente
+        tenetur veniam.
+      </p>
+    </div>
+
+    <div class="row gap-y text-center text-md-left">
+      <div
+        class="col-md-4 py-4 rounded shadow-hover"
+        *ngFor="let element of elements"
+      >
+        <dc-feather
+          [name]="element.icon"
+          class=""
+          [iconClass]="'stroke-primary mb-3'"
+        ></dc-feather>
+        <h5 class="bold">{{ element.title }}</h5>
+        <p>{{ element.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

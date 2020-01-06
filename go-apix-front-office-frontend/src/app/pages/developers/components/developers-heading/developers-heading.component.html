@@ -1,0 +1,33 @@
+<header
+  class="header page section parallax image-background blanket gradient gradient-purple-navy alpha-8 text-contrast"
+  [style.background-image]="'url(assets/img/bg/grid.jpg)'"
+>
+  <div class="container overflow-hidden">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="lead bold">Welcome Developers!</p>
+        <h1 class="display-4 text-contrast light">Tools for your day-to-day</h1>
+        <h1 class="text-contrast">
+          <ngx-typed-js
+            [strings]="['Invoicing', 'Subscriptions', 'Mailing', 'Reporting']"
+            [typeSpeed]="150"
+            [backDelay]="500"
+            [backSpeed]="50"
+            [loop]="true"
+          >
+            <span class="typing typed bold display-4 display-md-3"></span>
+          </ngx-typed-js>
+        </h1>
+
+        <nav class="nav mt-5">
+          <a
+            href="#"
+            class="nav-link btn btn btn-rounded btn-contrast btn-lg px-5 bold"
+          >
+            Review full docs
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

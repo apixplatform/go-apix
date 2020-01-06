@@ -1,0 +1,148 @@
+<!-- <app-header></app-header> -->
+<div class="container vh-fill">
+	<div class="pt-5 text-center">
+		<h1 class="text-white">Central Bank - Supervision Centre</h1>
+		<div class="header-des">Central Bank Reporting Portal is an on-line application that manages all of your formal communications with your regulator.</div>
+	</div>
+	<div class="row pt-5">
+		<div class="col overflow-auto">
+			<table class="table table-bordered table-light upload-table">
+				<thead>
+					<tr>
+						<th scope="col">Banks</th>
+						<th scope="col">Report Period</th>
+						<th scope="col">Due Date</th>
+						<th scope="col">End Date</th>
+						<th scope="col">Report Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">{{endpointData?.entity.name ? 'GO APIX':''}}</th>
+						<td>{{ endpointData?.name }}</td>
+						<td>{{ endpointData?.revisions[0]?.dueDate }}</td>
+						<td>{{ endpointData?.endDate }}</td>
+						<td>{{ endpointData?.status.name }}
+							{{ endpointData?.status.name !== 'No Data'
+                                ? endpointData?.revisions[0]?.hasErrors
+                                    ? '[Errors Present].'
+                                    : '[No Errors].'
+                                : '' }}
+							<button *ngIf="(endpointData?.status.name !== 'No Data') && (endpointData?.revisions[0]?.hasErrors)" (click)="openValidationModal(errorsModal,endpointData?.revisions[0]?.id)" type="button" class="btn btn-sm btn-link p-0 pull-up" data-toggle="modal" data-target="#errorsModal">View Errors</button>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Citi Bank</th>
+						<td>MAS610 Quarter 4</td>
+						<td>1/31/2018</td>
+						<td>12/31/2017</td>
+						<td class="red">Completed [With Errors]</td>
+					</tr>
+					<tr>
+						<th scope="row">OCBC Bank</th>
+						<td>MAS610 Quarter 4</td>
+						<td>1/31/2018</td>
+						<td>12/31/2017</td>
+						<td class="green">Submitted For Approval [No Errors]</td>
+					</tr>
+					<tr>
+						<th scope="row">CB Bank</th>
+						<td>MAS610 Quarter 4</td>
+						<td>1/31/2018</td>
+						<td>12/31/2017</td>
+						<td>No Data</td>
+					</tr>
+					<tr>
+						<th scope="row">AYA Bank</th>
+						<td>MAS610 Quarter 4</td>
+						<td>1/31/2018</td>
+						<td>12/31/2017</td>
+						<td class="dark-grey">Not Submitted</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="row mt-2 card p-3 mt-5">
+				Central Bank Reporting Portal is an on-line application that manages all of your formal communications with the regulated Financial Institutions.
+				<ul class="my-0">
+					<li>Using this Portal, you will be able to review and validate all reporting submissions on-line. </li>
+					<li>In addition, you will be able to see the company’s profile – the current information held by the
+						us about the company </li>
+				</ul>
+			</div>
+			<div class="row pt-4">
+				<div class="col-md-12 powered-by">
+					<small>Powered by: </small>
+					<img src="./assets/media/company-logos/vizor.png" class="pl-2 logo">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="modal fade" id="errorsModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Errors</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<table class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Rule Name</th>
+							<th scope="col">Violation Type</th>
+							<th scope="col">Validation Message</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let failedRule of failedRules">
+							<td>{{ failedRule.ruleName }}</td>
+							<td>{{ failedRule.type }}</td>
+							<td>{{ failedRule.validationMessage }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<ng-template #errorsModal let-modal>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Errors</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<table class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Rule Name</th>
+							<th scope="col">Violation Type</th>
+							<th scope="col">Validation Message</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let failedRule of failedRules">
+							<td>{{ failedRule.ruleName }}</td>
+							<td>{{ failedRule.type }}</td>
+							<td>{{ failedRule.validationMessage }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modal.dismiss('Cross click')">Close</button>
+			</div>
+		</div>
+	</div>
+  </ng-template>

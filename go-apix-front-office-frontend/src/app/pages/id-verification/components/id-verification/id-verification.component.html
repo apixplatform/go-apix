@@ -1,0 +1,108 @@
+<div class="container-fluid canvas-bg">
+  <div class="container content-bg">
+    <div class="page-heading">
+      <h1 class="title">WELCOME TO MODEL BANK</h1>
+      <h6 class="subheading">
+        Thank you for choosing to create an account with us.
+      </h6>
+
+      <hr />
+    </div>
+
+    <div class="row steps-custom">
+      <div class="text-center progress-circle-active">
+        <span class="span-number">01</span>
+      </div>
+
+      <div class="div progress-tracker"></div>
+
+      <div class="text-center progress-circle">
+        <span class="span-number">02</span>
+      </div>
+
+      <div class="div progress-tracker"></div>
+
+      <div class="text-center progress-circle">
+        <span class="span-number">03</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <!--Step Action-->
+      <p class="text-description">
+        First, let's validate your identity. <br />Please submit a picture of
+        your National Identity Document and your picture.
+      </p>
+    </div>
+
+    <div class="row" [class.d-none]="!verified">
+      <div class="col">
+        <img class="img-fluid" id="image1" />
+      </div>
+      <div class="col">
+        <img class="img-fluid" id="image2" />
+      </div>
+      <div class="col text-description mx-auto">
+        <div>Confidence:</div>
+        <br />
+        <h1 class="title">
+          {{ confidence }}
+          <img
+            *ngIf="confidence > 70"
+            src="../../../../../assets/checked.png"
+          />
+          <img *ngIf="confidence <= 70" src="../../../../../assets/error.png" />
+        </h1>
+      </div>
+      <div
+        class="col-12 text-center mx-auto text-danger pt-3"
+        *ngIf="confidence <= 70"
+      >
+        Our API could not find a match between the uploaded images. Please try
+        again with more similar images.
+      </div>
+      <div class="col-12 text-center mx-auto">
+        <button
+          [disabled]="confidence <= 70"
+          class="input-button mr-3"
+          [routerLink]="['/account-opening']"
+        >
+          Go to Account Creation
+        </button>
+        <button class="input-button ml-3" (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+
+    <div class="form" *ngIf="!verified">
+      <div class="id-photo upload">
+        <label class="label">UPLOAD ID PHOTO</label>
+        <br />
+        <input
+          class="input-field"
+          type="file"
+          (change)="onFile1Selected($event)"
+        />
+      </div>
+
+      <div class="selfie-photo upload">
+        <label class="label">UPLOAD SELFIE</label>
+        <br />
+        <input
+          class="input-field"
+          type="file"
+          (change)="onFile2Selected($event)"
+        />
+      </div>
+
+      <div class="text-center">
+        <button
+          class="input-button"
+          [disabled]="!(APIXToken && image1 && image2)"
+          (click)="verifyUser()"
+        >
+          Verify
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

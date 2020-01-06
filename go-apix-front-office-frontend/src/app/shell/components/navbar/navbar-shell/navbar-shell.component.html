@@ -1,0 +1,47 @@
+<nav
+  class="navbar navbar-expand-md navigation sidebar-left fixed-top"
+  [ngClass]="{
+    'navbar-expanded': navbarExpanded,
+    'navbar-sticky': navbarSticky,
+    'dark-link': darkLinks
+  }"
+>
+  <div class="container">
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a href="#main" class="navbar-brand">
+      <img
+        src="assets/img/logo.png"
+        alt="Dashcore"
+        class="logo logo-sticky"
+        *ngIf="useOnlyDarkLogo; else logos"
+      />
+      <ng-template #logos>
+        <img
+          src="assets/img/logos/go-apix-logo-white.svg"
+          alt="GO APIX Logo"
+          class="logo logo-sticky d-block d-md-none"
+        />
+        <img
+          src="assets/img/logos/go-apix-logo-white.svg"
+          alt="GO APIX Logo"
+          class="logo d-none d-md-block"
+        />
+      </ng-template>
+    </a>
+
+    <div class="collapse navbar-collapse ml-auto">
+      <div class="sidebar-brand">
+        <a href="#main">
+          <img src="assets/img/logo.png" alt="Dashcore Template" class="logo" />
+        </a>
+      </div>
+
+      <ng-content></ng-content>
+    </div>
+  </div>
+</nav>

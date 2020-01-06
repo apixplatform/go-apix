@@ -1,0 +1,45 @@
+<!-- ./Advanced Marketing Automation Solution -->
+<section
+  class="section text-contrast advanced-automation-solution overflow-hidden"
+>
+  <div class="shape-wrapper">
+    <div class="shape shape-background mountain top shape-left"></div>
+  </div>
+
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2 class="bold text-contrast">Advanced Marketing Automation Solution</h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+        consequatur dicta, dignissimos fugiat nisi rerum similique voluptates?
+        Aspernatur at beatae excepturi laboriosam molestiae quae reprehenderit
+        sit suscipit tempora, voluptatibus voluptatum?
+      </p>
+    </div>
+
+    <div class="bg-contrast shadow-lg rounded">
+      <div class="browser">
+        <div class="screen">
+          <img
+            src="assets/img/screens/dash/1.png"
+            class="img-responsive rounded-bottom"
+            alt=""
+          />
+        </div>
+
+        <div class="bubbles-speech d-none d-md-block">
+          <span
+            class="absolute small shadow speech-bubble"
+            *ngFor="let bubble of bubbles"
+            [ngStyle]="{
+              'top.%': bubble.position.top,
+              'left.%': bubble.position.left
+            }"
+            data-aos="slide-up"
+            >{{ bubble.text }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

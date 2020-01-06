@@ -1,0 +1,30 @@
+<section
+  class="section {{ background ? 'bg-' + background : '' }} {{
+    edge ? 'edge ' + edge : ''
+  }}"
+  [ngClass]="classes"
+>
+  <div class="container bring-to-front">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Do you have <span class="bold">questions</span></h2>
+
+        <p class="lead">
+          Not sure how this template can help you? Wonder why you need to buy
+          our theme?
+        </p>
+
+        <p class="text-muted">
+          Here are the answers to some of the most common questions we hear from
+          our appreciated customers
+        </p>
+      </div>
+
+      <div class="col-md-8">
+        <div class="accordion accordion-clean">
+          <dc-faqs-accordion></dc-faqs-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

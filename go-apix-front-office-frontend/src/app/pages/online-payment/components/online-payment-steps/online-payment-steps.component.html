@@ -1,0 +1,79 @@
+<section class="section">
+  <div class="shape-wrapper">
+    <div class="shape shape-background shape-right"></div>
+    <div class="shape shape-background top shape-left bg-info op-1"></div>
+  </div>
+
+  <div class="container pb-9">
+    <div
+      class="row gap-y align-items-center py-5"
+      *ngFor="let step of steps; let i = index"
+    >
+      <div class="col-md-6" [class.order-md-2]="(i + 1) % 2 === 0">
+        <figure [attr.data-aos]="(i + 1) % 2 == 0 ? 'fade-left' : 'fade-right'">
+          <img
+            src="assets/img/shps/payments/{{ step.image.name }}.svg"
+            class="img-responsive {{ step.image.class }}"
+            alt=""
+          />
+
+          <img
+            src="assets/img/shps/payments/register-click.svg"
+            class="img-responsive absolute w-50"
+            alt=""
+            style="bottom: 10%; left: 125px;"
+            data-aos="fade-up"
+            *ngIf="i === 0"
+          />
+        </figure>
+      </div>
+
+      <div class="col-md-6">
+        <div class="icon-xxl mb-4">
+          <div class="icon-shape">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 219.98 213.35"
+              class="shape shape-xxl drop-shadow"
+            >
+              <defs>
+                <style>
+                  .cls-shape {
+                    fill: #1fa2ff;
+                  }
+                </style>
+              </defs>
+              <title>shape-4</title>
+              <g id="layer_1" data-name="layer_1">
+                <g id="OBJECTS">
+                  <path
+                    class="cls-shape"
+                    d="M92.2.36c58.51-4,85.65,25.71,100.68,65.52s37.29,53.51,21.92,99.33-70.9,51.88-92.59,46.52S78,192.49,51,182.07C10.79,166.56.86,146.16.06,126.06-1.07,97.63,13.92,94.45,18.73,63.28,24.51,25.93,46.43,3.47,92.2.36Z"
+                  />
+                </g>
+              </g>
+            </svg>
+
+            <fa-icon
+              [icon]="step.icon"
+              class="icon center-xy text-contrast"
+              size="2x"
+            ></fa-icon>
+          </div>
+        </div>
+
+        <h2 class="bold text-capitalize">{{ step.title }}</h2>
+        <p class="regular">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+          autem dolorem eaque est eum fugit harum maiores minima nisi nobis,
+          possimus, quas qui quo ratione sequi suscipit vel vero voluptas?
+        </p>
+        <a
+          href="javascript:;"
+          class="btn gradient gradient-purple-blue text-contrast btn-rounded btn-outline-contrast bw-2 bold mt-4"
+          >{{ step.button.text }}</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

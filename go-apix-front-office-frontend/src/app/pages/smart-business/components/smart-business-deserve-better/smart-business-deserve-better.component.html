@@ -1,0 +1,35 @@
+<section class="section gradient gradient-blue-purple">
+  <div class="container text-center pb-7 pb-md-0">
+    <div class="section-heading">
+      <h2 class="bold text-contrast">You deserve better</h2>
+      <p class="lead text-light">
+        With DashCore you will not only get a beautiful HTML template tou
+        showoff your web, but a complete starter kit to bring your application
+        to life right away
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Powerful Tools -->
+<section class="section mt-9n">
+  <div class="container">
+    <div class="row gap-y">
+      <div class="col-md-6" *ngFor="let card of cards">
+        <div class="rounded media bg-contrast shadow-lg p-4">
+          <div
+            class="shadow gradient gradient-purple-blue text-contrast rounded-circle mr-3 icon-xl center-flex"
+            data-aos="zoom-in"
+          >
+            <fa-icon [icon]="card.icon" size="2x"></fa-icon>
+          </div>
+
+          <div class="media-body">
+            <h5 class="bold text-capitalize">{{ card.title }}</h5>
+            <p class="text-secondary mb-0">{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

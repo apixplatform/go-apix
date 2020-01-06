@@ -1,0 +1,26 @@
+<form class="form" data-response-message-animation="slide-in-left" novalidate>
+  <div class="input-group-register" [ngClass]="inputClass">
+    <input
+      type="email"
+      name="Subscribe[email]"
+      class="form-control shadow-lg bg-contrast form-control-rounded"
+      placeholder="Enter your email"
+      required
+    />
+    <button
+      class="btn btn-rounded btn-primary btn-lg text-capitalize"
+      type="submit"
+    >
+      {{ label }}
+    </button>
+  </div>
+</form>
+
+<div class="response-message">
+  <i class="fas fa-envelope font-lg"></i>
+  <p class="font-md m-0">Check your email</p>
+  <p class="response">
+    We sent you an email with a link to get started. You’ll be in your account
+    in no time.
+  </p>
+</div>

@@ -1,0 +1,52 @@
+<section class="section b-b b-t bg-light">
+  <div class="container">
+    <div class="section-heading text-center">
+      <dc-feather [name]="'box'" [iconClass]="'stroke-primary'"></dc-feather>
+      <h2>Developer tools</h2>
+      <p class="lead text-secondary">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto,
+        assumenda autem consequatur cum dignissimos dolores doloribus eius eum
+        iusto laborum quasi quidem sapiente sit.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-lg-3 ml-lg-auto order-md-2">
+        <nav
+          id="sw-nav-developers"
+          class="nav flex-md-column justify-content-between justify-content-md-start nav-pills nav-pills-light nav-fill"
+        >
+          <a
+            class="nav-item nav-link bold text-md-left"
+            [class.active]="i === currentSlide"
+            (click)="updateSlider(i)"
+            href="javascript:void(0)"
+            *ngFor="let item of items; let i = index"
+            ><fa-icon [icon]="item.icon" class="mr-2"></fa-icon>
+            {{ item.label }}</a
+          >
+        </nav>
+
+        <hr class="mt-5" />
+        <a href="javascript:;" class="nav-link text-primary"
+          >All Resources
+          <fa-icon [icon]="longArrowAltRight" class="mr-2"></fa-icon
+        ></a>
+      </div>
+
+      <div class="col-md-8">
+        <swiper
+          class="mt-4 mt-md-0 line-numbers"
+          [index]="currentSlide"
+          (indexChange)="onIndexChange($event)"
+        >
+          <div class="swiper-slide" *ngFor="let item of items">
+            <ngx-prism [language]="item.lang">
+              {{ item.code }}
+            </ngx-prism>
+          </div>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</section>

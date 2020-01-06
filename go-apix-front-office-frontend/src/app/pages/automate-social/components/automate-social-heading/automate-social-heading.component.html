@@ -1,0 +1,59 @@
+<header class="section header text-contrast automate-social-header">
+  <div class="shape-wrapper">
+    <div
+      class="shape shape-background shape-main gradient gradient-blue-purple"
+    ></div>
+    <div class="shape shape-background shape-main shadow"></div>
+    <div class="shape shape-background shape-top"></div>
+    <div class="shape shape-background shape-right"></div>
+  </div>
+
+  <div class="container overflow-hidden">
+    <div class="row gap-y">
+      <div class="col-lg-6">
+        <h1
+          class="text-contrast extra-bold display-md-3 display-lg-2 font-lg mb-5"
+        >
+          Automate
+          <span class="d-block light font-md">campaign management</span>
+        </h1>
+        <p class="text-contrast lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore
+          excepturi explicabo, harum in laudantium nulla officiis reprehenderit!
+        </p>
+
+        <dc-form-register-simple-inline
+          [inputClass]="'py-4'"
+          [label]="'Start Free Trial'"
+        ></dc-form-register-simple-inline>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-shape-wrapper">
+    <div class="bubbles-wrapper">
+      <div data-aos="fade-up">
+        <img
+          src="assets/img/v8/header/main-shape.svg"
+          class="img-responsive main-shape floating"
+          alt=""
+        />
+      </div>
+
+      <ul class="animations m-0">
+        <li
+          class="bubble icon icon-{{
+            i % 2 == 0 ? 'xl' : i % 3 == 0 ? 'lg' : 'xxl'
+          }}"
+          *ngFor="let bubble of bubbles; let i = index"
+        >
+          <img
+            src="assets/img/v8/header/{{ bubble.icon }}.svg"
+            alt=""
+            class="img-responsive"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

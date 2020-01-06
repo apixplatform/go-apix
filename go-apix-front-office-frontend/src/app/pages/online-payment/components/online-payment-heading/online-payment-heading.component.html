@@ -1,0 +1,44 @@
+<header class="header page online-payment-header section text-contrast">
+  <div id="stripes">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="container overflow-hidden bring-to-front">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-contrast bold">
+          Buy and Pay Online
+          <span class="d-block light">from anywhere, any time</span>
+        </h1>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore
+          excepturi explicabo, harum in laudantium nulla officiis reprehenderit!
+        </p>
+
+        <nav class="nav mt-5">
+          <a
+            [routerLink]="['/pricing']"
+            class="nav-link mr-3 btn btn btn-rounded btn-contrast"
+          >
+            <fa-icon [icon]="tag" class="mr-3"></fa-icon> Plans & pricing
+          </a>
+
+          <a
+            [routerLink]="['/auth/register']"
+            class="nav-link btn btn-rounded btn-success"
+          >
+            Start now
+          </a>
+        </nav>
+      </div>
+
+      <div class="col-md-6">
+        <img
+          src="assets/img/bg/online-payment.svg"
+          class="img-hero img-responsive absolute-md"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</header>

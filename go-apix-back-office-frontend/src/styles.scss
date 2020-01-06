@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~material-design-icons/iconfont/material-icons.css";
+@import "~highlight.js/styles/googlecode.css";
+
+// hide bootstrap dropdown arrow globally
+.dropdown-toggle::after {
+	display: none !important;
+}
+
+.mat-table__wrapper--dashboard .mat-table {
+	min-width: 600px !important;
+	width: 100% !important;
+}
+
+.position-static {
+	position: static;
+}
+
+// table
+.upload-table {
+	thead {
+		tr {			
+			color: #6b6767 !important;
+			background-color: #dcdbdb !important;
+			border-bottom: 2px solid #ccc;
+			th {
+				border-color: #dcdbdb;
+				font-weight: bold;
+			}
+		}
+	}
+	th, td {
+		vertical-align: middle !important;
+	}
+	tbody {
+		tr {
+			border-bottom: 2px solid #D0D0D0;
+			color: #838383 !important;
+			th {
+				font-weight: normal !important;
+			}
+		}
+	}
+}
+.overflow-auto {
+	overflow: auto;
+}
+
+// upload button
+.btn-file-upload {
+    display: inline-block;
+    width: 70px;
+    height: 32px;
+    overflow: hidden;
+	position: relative;
+	.btn {
+		background-color: #366cf3 !important;
+		color: #ffffff  !important;
+		cursor: pointer;
+	}
+  }
+  .btn-file-upload > input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+	opacity: 0;
+	height: 32px;
+	cursor: pointer;
+  }
+
+//colours
+.green {
+	color: #417505;
+}
+.red {
+	color: #FF001F;
+}
+.dark-grey {
+	color: #202020;
+}
+
+.powered-by {
+	text-align: right; 
+	font-style: italic;
+  
+	.logo {
+	  max-height: 40px;
+	  max-width: 120px;
+	}
+  }

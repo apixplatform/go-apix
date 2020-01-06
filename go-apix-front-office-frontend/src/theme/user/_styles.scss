@@ -1,0 +1,186 @@
+//
+// user/styles.scss
+// This file is mean to write your custom styling rules
+// It is recommended you do this way and not by editing the Bootstrap or DashCore styling files directly because future updates
+
+//// Header Banner ////
+.header-banner {
+  .container {
+    padding-top: 30px;
+
+    .nav {
+      margin-top: 55px;
+    }
+  }
+}
+
+.lead-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $Font-Regular;
+  color: $color-white;
+  width: 50%;
+
+  @media (max-width: 667px) {
+    width: 100%;
+  }
+}
+
+//// Button Styling ////
+.btn {
+  height: 36px;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 2.25rem;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 24px;
+  white-space: normal;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($color-line-blue, 0.25);
+  }
+}
+
+.btn-large {
+  height: 48px;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.btn-blue {
+  background-color: rgba($color-btn-blue, 1);
+  color: $color-white;
+  font-weight: $Font-Bold;
+
+  &:hover {
+    background-color: rgba($color-btn-blue, 0.8);
+  }
+}
+
+.btn-white {
+  background-color: rgba($color-white, 1);
+  color: $color-body-copy;
+  font-weight: $Font-Regular;
+
+  &:hover {
+    background-color: rgba($color-white, 0.8);
+  }
+}
+
+.btn-outline {
+  background-color: $color-white;
+  color: $color-body-copy;
+  font-weight: $Font-Regular;
+  border: 1px solid $color-body-copy;
+
+  &:hover {
+    background-color: $color-white-btn-hover;
+  }
+}
+
+.btn-transparent {
+  background-color: transparent;
+  color: $color-white;
+  font-weight: $Font-Regular;
+  border: 1px solid $color-white;
+
+  &:hover {
+    opacity: 0.85;
+    color: $color-white;
+  }
+}
+
+//// Header text ////
+h1 {
+  font-weight: $Font-Extra-Bold;
+  color: $color-white;
+}
+
+h2 {
+  font-weight: $Font-Bold;
+  color: $color-header;
+}
+
+//// Body Text ////@at-root
+.body-text-lg {
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: $Font-light;
+  color: $color-body-text-lg;
+}
+
+.text-dark-grey {
+  color: $color-body-copy;
+}
+
+.text-weight-3 {
+  font-weight: $Font-light;
+}
+
+.text-weight-4 {
+  font-weight: $Font-Regular;
+}
+
+.text-weight-5 {
+  font-weight: $Font-Medium;
+}
+
+.text-weight-6 {
+  font-weight: $Font-Semi-Bold;
+}
+
+.text-weight-7 {
+  font-weight: $Font-Bold;
+}
+
+.text-weight-8 {
+  font-weight: $Font-Extra-Bold;
+}
+
+.blue-line {
+  height: 1px;
+  width: 100px;
+  border-top: 3px solid #4a90e2;
+  text-align: center;
+  display: block;
+  margin: 30px auto;
+}
+
+///// Input text /////
+.input-text {
+  height: 48px;
+  padding: 0.5rem 2.25rem;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 24px;
+  color: $color-body-copy;
+  border: 1px solid $color-line-grey1;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.error-msg {
+  color: #dc3545;
+  font-size: 16px;
+  font-weight: $Font-Regular;
+  padding: 0 0 0 20px;
+  display: block;
+}
+
+//// Header Logo ////@at-root
+.navigation {
+  .logo {
+    max-height: 50px;
+  }
+}
+
+//// pointer ////
+.cursor-pointer {
+  cursor: pointer;
+}

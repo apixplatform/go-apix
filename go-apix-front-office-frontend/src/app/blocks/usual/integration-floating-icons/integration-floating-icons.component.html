@@ -1,0 +1,52 @@
+<section class="section extending-core">
+  <div class="shape shape-background top shape-left bg-light"></div>
+
+  <div class="container">
+    <div class="row gap-y align-items-center">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <p class="text-primary bold small text-uppercase">
+            enterprise integration
+          </p>
+          <h2>Extend DashCore</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+            ipsum iste iure nihil non obcaecati quasi, sit? Aperiam asperiores
+            atque, commodi debitis fugiat in nemo optio sint velit. Pariatur,
+            sint!
+          </p>
+        </div>
+        <a href="#" class="btn btn-rounded btn-outline-primary bw-2 mr-3"
+          >Know More</a
+        >
+        <a
+          href="#"
+          class="btn btn-rounded btn-outline-contrast bw-2 bold gradient gradient-purple-blue text-contrast"
+          >Register Account</a
+        >
+      </div>
+
+      <div class="col-lg-6">
+        <div class="icons-wrapper position-relative">
+          <div
+            class="floating icon {{
+              icon.size
+            }} bg-contrast rounded-circle p-3 shadow m-0 absolute d-flex justify-content-center align-items-center"
+            [ngStyle]="{
+              'left.%': icon.position.left,
+              'top.%': icon.position.top
+            }"
+            data-aos="fade-left"
+            *ngFor="let icon of icons"
+          >
+            <img
+              [src]="'assets/img/integration/' + icon.name + '.svg'"
+              class="img-responsive"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

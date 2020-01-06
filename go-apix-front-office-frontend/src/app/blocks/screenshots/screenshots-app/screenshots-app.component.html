@@ -1,0 +1,19 @@
+<!-- .Screenshots -->
+<section class="screenshots coverflow">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2 class="bold display-4">App Screenshots</h2>
+      <p class="text-secondary">A picture is worth a thousand words</p>
+    </div>
+
+    <swiper [config]="config" class="swiper-container">
+      <div class="swiper-slide" *ngFor="let i of [1, 2, 3, 4, 5, 6]">
+        <img
+          class="img-responsive"
+          src="assets/img/screens/app/{{ i }}.png"
+          alt="..."
+        />
+      </div>
+    </swiper>
+  </div>
+</section>

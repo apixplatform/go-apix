@@ -1,0 +1,42 @@
+<!-- lightbox -->
+<section class="section bg-darker edge top-left">
+  <div class="container pt-8">
+    <div class="section-heading text-center w-75 mx-auto">
+      <h2 class="text-contrast bold">How to videos</h2>
+      <p class="lead text-contrast">
+        Take a look at how you can take advantage of the tons of features
+        included with our template.
+      </p>
+    </div>
+
+    <div class="row gap-y">
+      <div class="col-12 col-sm-6 col-md-4" *ngFor="let post of posts">
+        <div class="card shadow-box shadow-hover border-0">
+          <dc-modal-video [identifier]="'myModal'" [videoId]="post.videoId">
+            <div
+              [style.background-image]="
+                'url(https://picsum.photos/350/200/?random&gravity=' +
+                post.gravity +
+                ')'
+              "
+              class="blanket gradient gradient-blue-purple alpha-3 p-6 image-background cover center-flex"
+            >
+              <div class="content">
+                <dc-feather
+                  [name]="'play'"
+                  [iconClass]="'stroke-contrast'"
+                ></dc-feather>
+              </div>
+            </div>
+          </dc-modal-video>
+
+          <div class="card-body">
+            <h4 class="card-title regular">{{ post.title }}</h4>
+
+            <p class="card-text text-secondary">{{ post.description }}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+<section class="section overview">
+  <div class="container">
+    <div class="row align-items-center gap-y">
+      <div class="col-lg-5 mr-auto text-center text-md-left">
+        <div class="section-heading">
+          <dc-badge [bg]="'success'" [text]="'contrast'">
+            Succeed with DashCore
+          </dc-badge>
+          <h2>The new way to showcase your Startup</h2>
+
+          <p class="lead text-secondary">
+            DashCore is a Bootstrap 4 HTML template. Designed to help you
+            promote your solution in an easy and beautiful way.
+          </p>
+        </div>
+
+        <p>
+          It includes multiple components and pre-made demos ready for you to
+          personalize according to your own needs. DashCore includes a
+          ready-to-go Admin Dashboard with many out-of-the-box features.
+        </p>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="row gap-y">
+          <div
+            class="col-6 col-sm-5 col-md-6"
+            [ngClass]="card.class"
+            *ngFor="let card of cards"
+          >
+            <div
+              class="card rounded p-2 p-sm-4 shadow text-center text-md-left"
+              [ngClass]="card.bg"
+              [attr.data-aos]="card.animation"
+            >
+              <dc-feather
+                [name]="card.icon"
+                [iconClass]="card.iconClass"
+              ></dc-feather>
+              <p class="bold mb-0">{{ card.title }}</p>
+              <p class="text-muted small">{{ card.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

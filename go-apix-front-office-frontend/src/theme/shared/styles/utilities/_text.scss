@@ -1,0 +1,37 @@
+/* 2.10 Text ======================================================= */
+
+.italic {
+  font-style: italic !important;
+}
+.underline {
+  text-decoration: underline !important;
+}
+.dotted {
+  border-bottom: 1px dotted;
+}
+.strike-through,
+s {
+  text-decoration: line-through !important;
+  color: $strike-color;
+  font-weight: $font-weight-light;
+}
+.text-wrap {
+  white-space: normal !important;
+}
+
+.bold,
+strong {
+  font-weight: $font-weight-bold !important;
+}
+.thin {
+  font-weight: $font-weight-lighter !important;
+}
+.light {
+  font-weight: $font-weight-light !important;
+}
+.regular {
+  font-weight: $font-weight-normal !important;
+}
+.extra-bold {
+  font-weight: $font-weight-bolder !important;
+}

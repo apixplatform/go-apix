@@ -1,0 +1,56 @@
+<!-- ./Path to success -->
+<section class="section path-success">
+  <div class="shape-wrapper">
+    <div class="shape-ring absolute right top" data-aos="fade-up"></div>
+  </div>
+
+  <div class="container bring-to-front">
+    <div class="row gap-y align-items-center text-center text-lg-left">
+      <div class="col-md-6 col-lg-5 ml-lg-auto order-md-2">
+        <div class="device-twin align-items-center">
+          <div class="mockup absolute right" data-aos="fade-right">
+            <div class="screen">
+              <img src="assets/img/screens/app/1.png" alt="..." />
+            </div>
+            <span class="button"></span>
+          </div>
+
+          <div class="iphone-x front ml-0">
+            <div class="screen shadow-box">
+              <img src="assets/img/screens/app/2.png" alt="..." />
+            </div>
+            <div class="notch"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 text-center text-md-left">
+        <div class="section-heading">
+          <i class="fas fa-trophy fa-2x text-danger mb-3"></i>
+          <h2 class="bold font-md">We are your path to Success</h2>
+        </div>
+
+        <ul class="list-unstyled">
+          <li
+            class="media flex-column flex-md-row"
+            *ngFor="let feature of elements"
+          >
+            <!-- {{ " mt-3" if loop.index > 1 }} -->
+            <dc-feather
+              [name]="feature.icon"
+              class="mx-auto mr-md-3"
+              [iconClass]="'stroke-primary'"
+            ></dc-feather>
+            <div class="media-body mt-3 mt-md-0">
+              <h5 class="bold mt-0 mb-1">{{ feature.title }}</h5>
+              <p class="m-0">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                aut autem eum laudantium quas recusandae repellendus voluptate.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+@import "user/variables";
+@import "user/styles.scss";
+
+h1 {
+  color: $color-header;
+}
+
+.header-logo {
+  max-width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.full-width {
+  display: flex;
+  input {
+    flex: 1;
+  }
+  @media (max-width: 667px) {
+    display: block;
+    text-align: center;
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.color-band {
+  display: block;
+  padding: 8px 15px;
+  font-weight: $Font-Regular;
+  font-size: 16px;
+  color: $color-white;
+  opacity: 0.7;
+}
+
+.arrow-right {
+  float: right;
+  margin-top: 8px;
+}
+.color-b1 {
+  background-color: #9b35ee;
+}
+.color-b2 {
+  background-color: #618b31;
+}
+.color-b3 {
+  background-color: #dd972a;
+}
+.color-b4 {
+  background-color: #845833;
+}
+.color-b5 {
+  background-color: #6adfc6;
+}
+.color-b6 {
+  background-color: #a6a19b;
+}

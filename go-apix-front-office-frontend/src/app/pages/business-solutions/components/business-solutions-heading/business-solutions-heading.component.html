@@ -1,0 +1,60 @@
+<!-- Integration Heading -->
+<header class="header page business-header section header-banner img-bg pt-0">
+  <nav class="st-nav navbar main-nav navigation" id="main-nav">
+    <div class="container p-0">
+      <ul class="st-nav-menu nav navbar-nav mt-3">
+        <li class="st-nav-section st-nav-secondary nav-item d-inline">
+          <a
+            class="btn btn-large btn-blue ml-md-1"
+            [href]="onlineBankingUrl + '/auth'"
+            target="_blank"
+          >
+            <i
+              class="fas fa-sign-in-alt d-inline mr-md-0 mr-lg-2"
+            ></i>
+            <span class="d-inline">LOGIN</span>
+          </a>
+        </li>
+        <!-- Mobile Navigation -->
+      </ul>
+    </div>
+  </nav>
+  <div class="container pb-6">
+    <div class="row">
+      <div class="col-md-10 mx-auto text-center">
+        <div class="header-logo">
+          <img
+            src="assets/img/logos/go-apix-logo-white.svg"
+            alt="GO APIX LOGO"
+            class="img-fluid"
+          />
+        </div>
+
+        <h1 class="text-center mt-5">
+          Your DIGITAL BANK at your finger tips.
+        </h1>
+
+        <p class="lead-text text-center mx-auto">
+          Gain access to a range of hassle-free digital banking products and
+          services so you can make the most out of your savings with us
+        </p>
+
+        <nav class="nav justify-content-center">
+          <button
+            class="btn btn-large btn-blue mr-md-1"
+            routerLink="/account-opening/validate-id"
+          >
+            CREATE ACCOUNT
+          </button>
+          <!-- <a
+            class="btn btn-large btn-blue ml-md-1"
+            [href]="onlineBankingUrl + '/auth'"
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOG
+            IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </a> -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

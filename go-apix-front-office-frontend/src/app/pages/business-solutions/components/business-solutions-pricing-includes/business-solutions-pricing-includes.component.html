@@ -1,0 +1,23 @@
+<section class="bg-dark">
+  <div class="container pt-15 pb-5">
+    <div class="row">
+      <div class="col-md-6" *ngFor="let item of features">
+        <div class="media pb-3">
+          <div class="bg-success p-3 rounded-circle center-flex mr-3">
+            <dc-feather
+              [name]="item.icon"
+              [iconClass]="'stroke-contrast'"
+            ></dc-feather>
+          </div>
+          <div class="media-body">
+            <h6 class="text-contrast">{{ item.title }}</h6>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+              atque beatae dicta dolores hic porro quam voluptatibus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

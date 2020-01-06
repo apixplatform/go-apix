@@ -1,0 +1,113 @@
+<div class="mt-5 mb-5 d-flex justify-content-center w-100">
+	<div class="col-md-12">
+		<h1 class="c-white">Overseas Money Transfer</h1>
+		<p class="c-white">Same-day transfers at $0 fees when you transfer money online using Go APIX</p>
+		<div class="button-row">
+			<a mat-raised-button [routerLink]="['/dashboard']" color="primary">HOME</a>
+		</div>
+	</div>
+</div>
+
+<div class="container clear-top text-dark">
+	<div class="kt-grid kt-wizard-v1 kt-wizard-v1--white">
+		<div class="kt-grid__item">
+			<!--begin: Form Wizard Nav -->
+			<div class="kt-wizard-v1__nav">
+				<div class="kt-wizard-v1__nav-items">
+					<a class="kt-wizard-v1__nav-item" href="javascript:;" data-ktwizard-type="step">
+						<div class="kt-wizard-v1__nav-body">
+							<div class="kt-wizard-v1__nav-icon">
+								<i class="fas fa-user"></i>
+							</div>
+							<div class="kt-wizard-v1__nav-label">
+								Beneficiary<br>Details
+							</div>
+						</div>
+					</a>
+					<a class="kt-wizard-v1__nav-item" href="javascript:;" data-ktwizard-type="step" data-ktwizard-state="current">
+						<div class="kt-wizard-v1__nav-body">
+							<div class="kt-wizard-v1__nav-icon">
+								<i class="fas fa-file-invoice-dollar"></i>
+							</div>
+							<div class="kt-wizard-v1__nav-label">
+								Remitter<br>Details
+							</div>
+						</div>
+					</a>
+					<a class="kt-wizard-v1__nav-item" href="javascript:;" data-ktwizard-type="step">
+						<div class="kt-wizard-v1__nav-body">
+							<div class="kt-wizard-v1__nav-icon">
+								<i class="fas fa-calendar-check"></i>
+							</div>
+							<div class="kt-wizard-v1__nav-label">
+								Transfer<br>Status
+							</div>
+						</div>
+					</a>
+
+				</div>
+			</div>
+			<!--end: Form Wizard Nav -->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col mt-5 px-extra">
+			<h2 class="font-weight-bold">Remitter Details</h2>
+			<h5>All the remitter fields below are mandatory.</h5>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col mt-5 px-extra">
+			<form [formGroup]="formDetails" (ngSubmit)="onSubmit(formDetails.value)">
+				<h4 class="pb-4"><strong>Remitter General Details</strong></h4>
+				<div class="form-group">
+					<label for="remittername">Name</label>
+					<input type="text" class="form-control" id="remittername" placeholder="Enter remitter name" formControlName="remittername" >
+				</div>
+				<div class="form-group">
+					<label for="remitteraddress1">Address</label>
+					<input type="text" class="form-control" id="remitteraddress1" placeholder="Enter remitter address" formControlName="remitteraddress1">
+				</div>
+				<div class="form-group">
+					<label for="remitterzipcode">ZIP Code</label>
+					<input type="text" class="form-control" id="remitterzipcode" placeholder="Enter remitter zip code" formControlName="remitterzipcode">
+				</div>
+				<div class="form-group">
+					<label for="remittermobileno">Telephone number</label>
+					<input type="text" class="form-control" id="remittermobileno" placeholder="Enter remitter telephone number" formControlName="remittermobileno">
+				</div>
+				<div class="form-group">
+					<label for="remitteremail">Email</label>
+					<input type="text" class="form-control" id="remitteremail" placeholder="Enter remitter email" formControlName="remitteremail" >
+				</div>
+
+				<h4 class="pb-4"><strong>Transaction Details</strong></h4>
+				<div class="form-group">
+					<label for="remitteraccno">Account Number</label>
+					<input type="text" class="form-control" id="remitteraccno" placeholder="Enter remitter account number" formControlName="remitteraccno" >
+				</div>
+				<div class="form-group">
+					<label for="tranamount">Amount</label>
+					<input type="number" class="form-control" id="tranamount" placeholder="Enter amount" formControlName="tranamount">
+				</div>
+				<div class="form-group">
+					<label for="purpose">Purpose</label>
+					<input type="text" class="form-control" id="purpose" placeholder="Enter remitter account number" formControlName="purpose">
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<button class="btn btn-secondary mr-3">Back</button>
+						<button type="submit" class="btn btn-primary" [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}">Transfer</button>
+						<small id="errHelp" *ngIf="!valid" class="form-text text-danger">All fields are mandatory. Please make sure all details are provided.</small>
+						<small id="errHelp2" *ngIf="errMsg" class="form-text text-danger">{{ errMsg }}</small>
+					</div>
+					<div class="col-md-6 powered-by">
+						<small>Powered by: </small> <img src="./assets/media/company-logos/remit-online.png" class="pl-2 logo">
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>

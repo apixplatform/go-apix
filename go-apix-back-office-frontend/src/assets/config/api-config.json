@@ -1,0 +1,20 @@
+{
+    "return": {
+        "returnTypeId": "8d3a972f-ba45-455c-a83c-fa0314904647",
+        "revisionId": 74,
+        "clearData": "true"
+    },
+    "APIXCredentials": {
+        "username": "<Enter APIX Username>",
+        "password": "<Enter APIX Password>"
+    },
+    "VizorCredentials": {
+        "username": "<Vizor Username>",
+        "password": "<Vizor Password>"
+    },
+    "routes": {
+        "APIXAuthUrl": "https://services.apixplatform.com/api-sandbox/application/token",
+        "VizorAuthUrl": "https://apis.vizorsoftware.com/VAS/oauth2/token",
+        "VizorAPIBaseUrl": "https://api.apixplatform.com/Submit/1/VAS/v1/returns"
+    }
+}

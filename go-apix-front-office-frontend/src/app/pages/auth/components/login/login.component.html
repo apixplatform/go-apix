@@ -1,0 +1,50 @@
+<h1 class="text-darker bold">Login</h1>
+<p class="text-secondary mt-0 mb-4 mb-md-6">
+  Don't have an account yet?
+  <a [routerLink]="['../register']" class="text-primary bold">Create it here</a>
+</p>
+
+<form class="cozy" action="srv/login.php" data-validate-on="submit" novalidate>
+  <label class="control-label bold small text-uppercase text-secondary"
+    >Username</label
+  >
+  <div class="form-group has-icon">
+    <input
+      type="text"
+      id="login_username"
+      name="Login[username]"
+      class="form-control form-control-rounded"
+      placeholder="Your registered username"
+      required
+    />
+    <fa-icon [icon]="fa.user" class="icon"></fa-icon>
+  </div>
+
+  <label class="control-label bold small text-uppercase text-secondary"
+    >Password</label
+  >
+  <div class="form-group has-icon">
+    <input
+      type="password"
+      id="login_password"
+      name="Login[password]"
+      class="form-control form-control-rounded"
+      placeholder="Your password"
+      required
+    />
+    <fa-icon [icon]="fa.lock" class="icon"></fa-icon>
+  </div>
+
+  <div class="form-group d-flex align-items-center justify-content-between">
+    <a [routerLink]="['../forgot']" class="text-warning small"
+      >Forgot your password?</a
+    >
+    <div class="ajax-button">
+      <div class="fas fa-check btn-status text-success success"></div>
+      <div class="fas fa-times btn-status text-danger failed"></div>
+      <button type="submit" class="btn btn-primary btn-rounded">
+        Login <fa-icon [icon]="fa.longArrowAltRight" class="ml-2"></fa-icon>
+      </button>
+    </div>
+  </div>
+</form>

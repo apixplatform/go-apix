@@ -1,0 +1,52 @@
+<footer class="site-footer section">
+  <div class="container py-4">
+    <hr class="mt-5" />
+
+    <div class="text-center">
+      <nav class="nav social-icons justify-content-center mt-4">
+        <a href="#" class="mr-3 font-regular text-secondary"
+          ><fa-icon [icon]="fa.facebookF"></fa-icon
+        ></a>
+        <a href="#" class="mr-3 font-regular text-secondary"
+          ><fa-icon [icon]="fa.twitter"></fa-icon
+        ></a>
+        <a href="#" class="mr-3 font-regular text-secondary"
+          ><fa-icon [icon]="fa.instagram"></fa-icon
+        ></a>
+        <a href="#" class="mr-3 font-regular text-secondary"
+          ><fa-icon [icon]="fa.rss"></fa-icon
+        ></a>
+        <a href="#" class="font-regular text-secondary"
+          ><fa-icon [icon]="fa.linkedinIn"></fa-icon
+        ></a>
+      </nav>
+
+      <p class="small copyright text-secondary">
+        © 2018 Dashcore, <em>by</em>
+        <a class="brand bold" href="http://www.5studios.net">5Studios.net</a>
+      </p>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-md-5 text-center text-md-left">
+        <nav class="nav justify-content-center justify-content-md-start">
+          <a class="nav-item nav-link" [routerLink]="['/about']">About</a>
+          <a class="nav-item nav-link" href="#">Services</a>
+          <a class="nav-item nav-link" href="#">Blog</a>
+        </nav>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <img src="assets/img/logo.png" alt="" class="logo" />
+      </div>
+
+      <div class="col-md-5 text-center text-md-right">
+        <nav class="nav justify-content-center justify-content-md-start">
+          <a class="nav-item nav-link" [routerLink]="['/terms']"
+            >Privacy Policy</a
+          >
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,17 @@
+@import "import";
+
+@each $i, $color in $theme-colors {
+  .stroke-#{$i} {
+    stroke: $color;
+  }
+}
+
+.wh36 {
+  width: 36px;
+  height: 36px;
+}
+
+.wh24 {
+  width: 24px;
+  height: 24px;
+}

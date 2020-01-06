@@ -1,0 +1,51 @@
+<header class="header section social-media-heading ">
+  <img
+    src="assets/img/bg/social/bg-shape.svg"
+    class="social-bg-shape absolute"
+    alt="..."
+  />
+
+  <div class="container py-md-8">
+    <div class="row gap-y align-items-center">
+      <div class="col-lg-6 col-xl-5 text-center text-lg-left">
+        <p class="badge-pill badge badge-light border bold px-4 py-2">
+          <span class="text-primary">80% Off</span> when registering
+        </p>
+        <h1 class="font-md extra-bold display-md-4">Social Media Services</h1>
+        <p class="lead my-5">
+          It all begins by choosing the right tools, start with a complete set
+          of design blocks to achieve your next success.
+        </p>
+
+        <a
+          [routerLink]="['/auth/subscribe']"
+          class="btn btn-info btn-rounded px-3"
+          >Try it free</a
+        >
+      </div>
+
+      <div class="col-lg-6 ml-lg-auto text-center text-lg-right">
+        <img
+          src="assets/img/bg/social/social.svg"
+          class="social-image"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="container-fluid shadow bg-primary py-4 rounded mt-7">
+      <div class="row gap-y">
+        <div
+          class="col-xs-4 col-md-3 col-6 px-lg-5 py-lg-4"
+          *ngFor="let i of [1, 2, 3, 4]"
+        >
+          <img
+            [src]="'assets/img/logos/' + i + '.svg'"
+            class="img-responsive px-2 px-sm-4 px-md-2 px-lg-1"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

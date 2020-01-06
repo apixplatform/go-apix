@@ -1,0 +1,68 @@
+<!-- ./Tools for everyone - Swiper -->
+<section class="section b-b b-t bg-light">
+  <div class="container">
+    <div class="section-heading text-center">
+      <dc-feather
+        [name]="'sliders'"
+        [iconClass]="'stroke-primary'"
+      ></dc-feather>
+      <h2>Tools for everyone</h2>
+      <p class="lead text-secondary">
+        Get ready in no time... just like 1, 2 & 3.
+      </p>
+    </div>
+
+    <div class="row align-items-end">
+      <div class="col-lg-4">
+        <h2 class="bold">
+          Start the right way<br /><span class="light"
+            >Start with Dashcore</span
+          >
+        </h2>
+        <p class="lead text-secondary">
+          Thinking about a new project? Start in no time with the tools Dashcore
+          brings to you.
+        </p>
+
+        <a href="pricing.html" class="btn btn-primary btn-rounded mt-4"
+          >Choose the right plan
+          <fa-icon [icon]="longArrowAltRight" [class]="'ml-3'"></fa-icon>
+        </a>
+
+        <ol
+          id="sw-nav-tools"
+          class="nav nav-process nav-circle nav-justified mt-5"
+        >
+          <li
+            class="nav-item"
+            [class.active]="i === currentSlide"
+            *ngFor="let element of elements; let i = index"
+          >
+            <a
+              class="nav-link"
+              href="javascript:void(0)"
+              [attr.data-step]="i + 1"
+              (click)="updateSlider(i)"
+            >
+              <small class="mt-4 absolute">{{ element }}</small>
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <div class="col-lg-7 ml-lg-auto">
+        <div class="browser shadow mt-4 mt-md-0" data-aos="fade-left">
+          <swiper [index]="currentSlide" (indexChange)="onIndexChange($event)">
+            <div class="swiper-slide" *ngFor="let i of [1, 2, 3, 4]">
+              <img
+                src="assets/img/screens/dash/{{ i }}.png"
+                alt=""
+                class="img-responsive"
+              />
+            </div>
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

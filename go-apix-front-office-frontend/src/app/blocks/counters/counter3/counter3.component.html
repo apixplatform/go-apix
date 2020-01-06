@@ -1,0 +1,51 @@
+<section class="section">
+  <div class="shape-wrapper">
+    <div class="shape shape-background shape-right"></div>
+    <div class="shape shape-background top shape-left bg-info op-1"></div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center text-center text-lg-left">
+      <div class="col-12 col-md-7 col-lg-6 mr-lg-auto text-center text-md-left">
+        <dc-feather
+          [name]="'activity'"
+          [iconClass]="'stroke-primary'"
+        ></dc-feather>
+        <p class="small text-primary bold">Amazing stats</p>
+
+        <h2 class="bold">Get the very best of us by doing the best of you</h2>
+        <p class="text-secondary">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+          dolores dolorum, error est excepturi exercitationem hic iusto minus
+          nam officia optio quasi tempore voluptatibus. Aut dolore in nostrum
+          quae voluptatem!
+        </p>
+      </div>
+
+      <div class="col-12 col-md-5 col-lg-5">
+        <div class="row no-gutters">
+          <div class="col-6 {{ box.class }}" *ngFor="let box of boxes">
+            <div
+              class="rounded shadow-box p-2 p-sm-3 d-flex align-items-center flex-wrap {{
+                box.bg
+              }}"
+            >
+              <dc-feather
+                [name]="box.icon"
+                [class]="'mr-4'"
+                [iconClass]="box.iconClass"
+              ></dc-feather>
+
+              <div class="text-left">
+                <p class="counter font-md bold m-0 {{ box.valueCss }}">
+                  {{ box.value }}
+                </p>
+                <p class="m-0">{{ box.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

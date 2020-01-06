@@ -1,0 +1,36 @@
+<section class="section bg-contrast edge bottom-right latest-projects">
+  <div class="container bring-to-front pt-0">
+    <div class="shadow-lg bg-contrast rounded">
+      <div class="bg-contrast rounded-bottom p-4">
+        <p class="bold lead my-0">Latest projects</p>
+        <p class="text-muted my-0">
+          Take a look at our latest projects, those customer have trust in our
+          services to bring their business to the next level
+        </p>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-6 col-md-4" *ngFor="let image of images; let i = index">
+          <div class="project-detail blanket blanket-secondary">
+            <a href="javascript:;">
+              <img
+                [src]="
+                  'https://picsum.photos/500/300?random=' +
+                  (i + 1) +
+                  '&gravity=south'
+                "
+                alt=""
+              />
+              <div class="description bg-dark text-contrast p-1 p-md-2">
+                <p class="bold">Project name</p>
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur ipsum voluptatem nobis labore sit
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+<section class="section bg-light">
+  <div class="container-fluid bring-to-front">
+    <div class="row">
+      <div class="col-md-3 mx-auto py-4 py-md-0">
+        <div
+          class="media"
+          [class.mb-5]="i == 0"
+          *ngFor="let item of items; let i = index"
+        >
+          <dc-feather
+            [name]="item.icon"
+            [size]="36"
+            [iconClass]="'stroke-primary mr-3'"
+          ></dc-feather>
+
+          <div class="media-body">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+
+            <a href="#!" class="more-link dotted"
+              >Learn more
+              <fa-icon [icon]="longArrowAltRight" class="ml-2"></fa-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7 mt-md-8n d-flex align-items-end">
+        <div
+          class="swiper-container"
+          [swiper]="fadingConfig"
+          [index]="currentSlide"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let feature of features">
+              <figure class="mb-0">
+                <img
+                  [src]="'assets/img/screens/dash/dash/' + feature.img + '.png'"
+                  class="img-responsive"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-success border-0 shadow tool-description-card">
+          <div class="card-body p-md-5">
+            <div
+              class="swiper-container pb-5"
+              [swiper]="slidingConfig"
+              (indexChange)="onIndexChange($event)"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let feature of features">
+                  <h4 class="bold heading-line">{{ feature.title }}</h4>
+                  <p class="text-contrast py-4 d-none d-md-block">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                    consequuntur facere hic, ipsa ipsum obcaecati odio optio
+                    quidem quod totam!
+                  </p>
+
+                  <a href="#!" class="more-link text-contrast dotted"
+                    >Learn more
+                    <fa-icon [icon]="longArrowAltRight" class="ml-2"></fa-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="swiper-pagination tools-pagination text-left highlight-active"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

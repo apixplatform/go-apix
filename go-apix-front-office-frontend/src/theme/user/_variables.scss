@@ -1,0 +1,27 @@
+//
+// user/variables.scss
+// This file is mean to overwrite Bootstrap or DashCore variables
+// It is recommended you do this way and not by editing the Bootstrap or DashCore variables files because future updates
+//
+
+// You can give a Boostrap or DashCore variable any value you like here, e.g
+// $body-color: #c3000d; // this will change the default font color
+
+///// Fonts /////
+$Barlow: "Barlow";
+$Font-light: 300;
+$Font-Regular: 400;
+$Font-Medium: 500;
+$Font-Semi-Bold: 600;
+$Font-Bold: 700;
+$Font-Extra-Bold: 800;
+
+///// Colours /////
+$color-body-copy: #1c1c1c;
+$color-header: #2b2929;
+$color-body-text-lg: #686868;
+$color-white: #ffffff;
+$color-btn-blue: #2093ef;
+$color-line-grey1: #979797;
+$color-white-btn-hover: #f6f6f6;
+$color-line-blue: #4a90e2;

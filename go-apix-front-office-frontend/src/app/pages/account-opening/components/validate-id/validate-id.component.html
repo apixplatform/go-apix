@@ -1,0 +1,138 @@
+<!-- Integration Heading -->
+<header class="header page business-header section img-bg">
+  <div class="container pb-8">
+    <div class="row">
+      <div class="col-md-10 mx-auto text-center">
+        <h1 class="text-center mt-4">
+          Create your Account
+        </h1>
+
+        <p class="lead text-contrast my-5 op-8">
+          Create your account and get started with your financial journey with
+          Go APIX today!
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <section>
+    <div class="col-md-12 pt-5 pb-5">
+      <h2 class="bold">
+        First, let’s validate your identity.
+      </h2>
+      <h5>
+        Please submit a picture of your National Identity Document and your
+        picture.
+      </h5>
+    </div>
+
+
+
+    <div class="col-md-12 pb-4">
+      <form class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="bold">Passport Identity Document</label>
+              <input type="file" class="form-control bg-contrast input-file-type" (change)="onFile1Selected($event)"
+                accept=".png, .jpg, .jpeg" required />
+              <div class="img-wrpper mt-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img class="upload-img img-responsive" id="idImage" src="{{ idImage }}" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="bold">Self Taken Picture</label>
+              <input type="file" class="form-control bg-contrast input-file-type" (change)="onFile2Selected($event)"
+                accept=".png, .jpg, .jpeg" required />
+              <div class="img-wrpper mt-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img class="upload-img img-responsive" id="selfieImage" src="{{ selfieImage }}" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" [class.d-none]="!submitToVerify">
+          <label class="bold">Identity Validation Status</label>
+          <div class="img-wrpper mt-3 d-flex align-items-baseline">
+            <div *ngIf="verified && confidence > 70">
+              <h5 class="d-inline mr-2">
+                Identity document matched to selfie with the confidence level of
+                {{ confidence }}
+              </h5>
+              <img src="../../../../../assets/checked.png" />
+              <h6 class="d-inline mr-2" *ngIf="ocrLoading">
+                <br><br>Retrieving 'Name' from identity document...
+              </h6>
+            </div>
+            <div *ngIf="!(verified && confidence > 70) && !loading">
+              <h5 class="d-inline mr-2">
+                ID verification failed. Please resubmit identity document and selfie.
+              </h5>
+              <img src="../../../../../assets/error.png" />
+            </div>
+          </div>
+
+          <div class="img-wrpper mt-3 d-flex align-items-baseline">
+            <div *ngIf="ocrVerified">
+              <h5 class="d-inline mr-2">
+                Identity document data captured successfully.
+              </h5>
+              <img src="../../../../../assets/checked.png" /><br><br>
+              <h5 class="d-inline mr-2">
+                <strong>Name:</strong> {{accountDetails.accountName}}
+              </h5>
+            </div>
+            <div *ngIf="!ocrVerified && !ocrLoading">
+              <h5 class="d-inline mr-2">
+                Identity document data capture failed. Please resubmit identity document.
+              </h5>
+              <img src="../../../../../assets/error.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group mt-5" *ngIf="!verified || !ocrVerified">
+              <button type="button" class="btn btn-primary btn-rounded mr-2"
+                [disabled]="!(APIXToken && image1 && image2)" (click)="verifyUser()">
+                Verify
+              </button>
+              <div class="spinner-border spinner-border-sm ml-1 mr-1" role="status" *ngIf="loading || ocrLoading">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <button type="button" class="btn btn-outline-primary btn-rounded mr-2 ml-2" (click)="cancel()">
+                Cancel
+              </button>
+            </div>
+            <div class="form-group mt-5" *ngIf="verified && ocrVerified">
+              <button type="button" class="btn btn-primary btn-rounded mr-1"
+                [routerLink]="['/account-opening/create-account']" routerLinkActive="router-link-active">
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 pt-5 pb-5 powered-by">
+            <small>Powered by: </small> <img src="./assets/img/logos/companies/datafornix.png" class="pl-2 logo">
+          </div>
+        </div>
+
+
+
+      </form>
+    </div>
+  </section>
+</div>
+
+<dc-footer1></dc-footer1>

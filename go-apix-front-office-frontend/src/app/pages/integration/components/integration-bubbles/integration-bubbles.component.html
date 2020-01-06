@@ -1,0 +1,9 @@
+<div class="bubbles-wrap">
+  <div class="bubbles-container">
+    <dc-bubble
+      *ngFor="let bubble of bubbles; let i = index"
+      [index]="i + 1"
+      [spec]="bubble"
+    ></dc-bubble>
+  </div>
+</div>

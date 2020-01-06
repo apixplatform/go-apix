@@ -1,0 +1,40 @@
+<section class="section bg-darker">
+  <div class="container text-center pt-4 pb-7">
+    <p class="text-contrast">
+      We're proud to announce the completion of the New Integration API.
+      <a
+        href="#"
+        class="bold d-inline-flex align-items-center text-contrast ml-3"
+        >Learn more <i data-feather="chevron-right"></i
+      ></a>
+    </p>
+  </div>
+</section>
+
+<!-- ./Integration API -->
+<section class="section mt-6n">
+  <div class="container pt-0">
+    <div class="shadow bg-contrast p-4 rounded">
+      <div class="row gap-y text-center text-md-left">
+        <div
+          class="col-md-4 py-4 px-5 d-flex flex-column"
+          [class.b-md-r]="i != 2"
+          *ngFor="let block of blocks; let i = index"
+        >
+          <a [routerLink]="['/']" class="text-darker">
+            <h4 class="bold mr-3">{{ block.title }}</h4>
+          </a>
+
+          <p class="mt-4">{{ block.description }}</p>
+
+          <a
+            [routerLink]="['/']"
+            class="d-block d-md-flex align-items-center mt-auto"
+            >Learn more
+            <fa-icon [icon]="longArrowAltRight" class="ml-3"></fa-icon
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

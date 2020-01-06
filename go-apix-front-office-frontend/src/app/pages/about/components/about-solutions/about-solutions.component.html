@@ -1,0 +1,66 @@
+<!-- ./Dashboard Included -->
+<section class="section bg-light edge top-left">
+  <div class="container bring-to-front">
+    <div class="section-heading text-center">
+      <h2>A solution for every need</h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam
+        atque dicta dignissimos eius excepturi fuga laudantium libero nam nihil,
+        obcaecati pariatur quaerat quam, quia quisquam repudiandae sed tenetur
+        veniam!
+      </p>
+    </div>
+
+    <div class="row align-items-center gap-y">
+      <div class="col-md-6 col-lg-5 text-center text-md-left">
+        <ul class="list-unstyled">
+          <li
+            class="media d-block d-lg-flex"
+            *ngFor="let feature of features; let i = index; let length = count"
+          >
+            <dc-feather
+              [name]="feature.icon"
+              [iconClass]="'stroke-primary'"
+              class="mr-3 text-lg-right"
+            ></dc-feather>
+            <div class="media-body mt-3 mt-lg-0 text-center text-md-left">
+              <h5 class="bold text-darker">{{ feature.title }}</h5>
+              <p class="mt-0" [ngClass]="{ 'mb-5': i < length }">
+                {{ feature.description }}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 col-lg-5 ml-md-auto">
+        <div class="shadow card">
+          <div
+            class="card-header blanket gradient gradient-blue-purple alpha-5 image-background cover"
+            style="background-image: url(assets/img/screens/dash/4.png)"
+          >
+            <div class="content">
+              <h2 class="mt-9 text-contrast light">Dashboard Included</h2>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <p>
+              Our template is packed with a
+              <span class="bold">Starter Admin Dashboard</span> to help you get
+              started right away with your project. You'll have not a beautiful
+              HTML template to promote your product but a starting point admin
+              template
+            </p>
+
+            <a
+              [routerLink]="['/auth/login']"
+              class="btn btn-primary btn-rounded mt-4"
+              >Try the Dashboard</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

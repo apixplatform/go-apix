@@ -1,0 +1,26 @@
+<section class="section features bg-light-gradient">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2>Our features stack</h2>
+      <p class="lead text-secondary">
+        Take the control of your web with DashCore. You can customize the theme
+        according to your needs or just use the ready-to-use content we made for
+        you
+      </p>
+    </div>
+
+    <div class="row gap-y">
+      <div class="col-md-3" *ngFor="let feature of features">
+        <div class="shadow-box shadow-hover border-0 card">
+          <div class="card-body text-center">
+            <dc-feather
+              [name]="feature.icon"
+              [iconClass]="'stroke-primary'"
+            ></dc-feather>
+            <p class="mb-0">{{ feature.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

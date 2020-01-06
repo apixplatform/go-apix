@@ -1,0 +1,14 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel *ngFor="let faq of faqs">
+    <ng-template ngbPanelHeader class="mb-3">
+      <button class="card-title btn" ngbPanelToggle>
+        <fa-icon [icon]="chevronDown" class="angle"></fa-icon>
+        {{ faq.question }}
+      </button>
+    </ng-template>
+
+    <ng-template ngbPanelContent>
+      <div [innerHTML]="faq.answer"></div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

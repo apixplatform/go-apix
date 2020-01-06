@@ -1,0 +1,58 @@
+<section class="section why-choose-us">
+  <div class="shapes-container">
+    <div class="pattern pattern-dots"></div>
+  </div>
+
+  <div class="container pb-8 bring-to-front">
+    <div class="row gap-y">
+      <div class="col-md-6">
+        <div class="mb-5">
+          <h2 class="heading-line">Ease external tools integration</h2>
+          <p class="text-muted lead">
+            Easely integrates with another templates of our own creation.
+          </p>
+        </div>
+
+        <div
+          *ngFor="let item of features; let i = index"
+          class="media"
+          [class.pb-3]="i < features.length"
+        >
+          <div
+            class="bg-light p-3 rounded d-flex align-items-center justify-content-center mr-3"
+          >
+            <dc-feather
+              [name]="item.icon"
+              [iconClass]="'stroke-primary'"
+            ></dc-feather>
+          </div>
+          <div class="media-body">
+            <h5>{{ item.name }}</h5>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+
+        <hr class="my-5" />
+        <div class="text-center text-md-left">
+          <a href="#!" class="btn btn-primary btn-rounded">Know More</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="rotated-mockups device-twin">
+          <div class="browser absolute shadow-lg">
+            <img src="assets/img/screens/tablet/1.png" alt="..." />
+          </div>
+
+          <div class="front iphone-x">
+            <div class="screen">
+              <img src="assets/img/screens/app/1.png" alt="..." />
+            </div>
+
+            <div class="notch"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

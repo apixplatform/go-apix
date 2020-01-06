@@ -1,0 +1,82 @@
+<!-- Integration Heading -->
+<header class="header page business-header section img-bg">
+  <div class="container pb-8">
+    <div class="row">
+      <div class="col-md-10 mx-auto text-center">
+        <h1 class="text-center mt-4">
+          Create your Account
+        </h1>
+        <p class="lead-text text-center mx-auto">
+          Create your account and get started with your financial journey with
+          Go APIX today!
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 pt-6 pb-5">
+      <h2>
+        Congratulations, your account has been successfully created!<br />
+      </h2>
+      <h5>
+        A mail from Model Bank has been sent to veryfy your identity and provide
+        further information. Please save the following details in a secure
+        location.
+      </h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 pb-4">
+      <h4><strong>Account Holder’s Name</strong></h4>
+      <h5>{{ accountName }}</h5>
+    </div>
+
+    <div class="col-md-4 pb-4">
+      <h4><strong>Personal ID</strong></h4>
+      <h5>{{ personalId }}</h5>
+    </div>
+
+    <div class="col-md-4 pb-4">
+      <h4><strong>Email</strong></h4>
+      <h5>{{ email }}</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 pb-4">
+      <h4><strong>Account Number</strong></h4>
+      <h5>{{ accountNumber }}</h5>
+    </div>
+
+    <div class="col-md-4 pb-4">
+      <h4><strong>Secondary Identification</strong></h4>
+      <h5>{{ secondaryIdentification }}</h5>
+    </div>
+
+    <div class="col-md-4 pb-4">
+      <h4><strong>Account Scheme</strong></h4>
+      <h5>{{ accountScheme }}</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group mt-4 col-md-6">
+      <a class="btn btn-large btn-blue mr-3" [href]="onlineBankingUrl + '/auth'">
+        LOGIN
+      </a>
+      <button class="btn btn-large btn-blue mr-3" routerLink="/home">
+        HOME
+      </button>
+    </div>
+    <div class="col-md-6 pt-3 pb-5 powered-by">
+      <small>Powered by: </small>
+      <img src="./assets/img/logos/companies/mambu.png" class="pl-2 logo">
+      <img src="./assets/img/logos/companies/smartbank.png" class="pl-2 logo">
+    </div>
+  </div>
+
+</div>
+
+<dc-footer1></dc-footer1>

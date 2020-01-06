@@ -1,0 +1,22 @@
+<section
+  class="section partners {{ background ? 'bg-' + background : '' }} {{
+    edge ? 'edge ' + edge : ''
+  }}"
+>
+  <div class="container py-5" [class.border-bottom]="bordered">
+    <h4 class="bold text-center mb-5 text-secondary" *ngIf="title">
+      {{ title }}
+    </h4>
+
+    <swiper [config]="config" class="swiper-container pb-5">
+      <div class="swiper-slide" *ngFor="let i of [1, 2, 3, 4, 5, 6]">
+        <img
+          src="assets/img/logos/{{ i }}.png"
+          class="img-responsive"
+          alt=""
+          style="max-height: 60px"
+        />
+      </div>
+    </swiper>
+  </div>
+</section>

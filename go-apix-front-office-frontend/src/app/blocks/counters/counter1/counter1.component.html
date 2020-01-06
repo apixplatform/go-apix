@@ -1,0 +1,26 @@
+<section
+  class="section counters gradient gradient-primary-dark text-contrast shadow-lg"
+>
+  <div class="container" [ngClass]="getPaddingBottom()">
+    <div class="section-heading text-center">
+      <h2 class="text-contrast">Millions business rely on DashCore</h2>
+      <p>
+        These amazing stats can be wrong, many happy customers around the world
+        trust our service to boost their products
+      </p>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-xs-4 col-md-3 text-center"
+        *ngFor="let counter of counters"
+      >
+        <dc-feather [name]="counter.icon"></dc-feather>
+        <p class="counter bold font-md mt-0" [countUp]="counter.value">
+          {{ counter.value }}
+        </p>
+        <p class="m-0">{{ counter.title }}</p>
+      </div>
+    </div>
+  </div>
+</section>

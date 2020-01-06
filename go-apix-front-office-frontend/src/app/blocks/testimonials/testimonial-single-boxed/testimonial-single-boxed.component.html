@@ -1,0 +1,106 @@
+<section class="section singl-testimonial">
+  <div class="container pt-8 bring-to-front">
+    <div class="swiper-container pb-0 pb-lg-8" [swiper]="config">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let review of reviews; let i = index">
+          <div class="row gap-y align-items-center">
+            <div class="col-lg-6">
+              <figure class="testimonial-img ml-md-auto">
+                <img
+                  [src]="'assets/img/v6/reviews/' + (i + 1) + '.jpg'"
+                  class="img-responsive rounded shadow-lg"
+                  alt="..."
+                />
+              </figure>
+            </div>
+
+            <div class="col-lg-6 ml-md-auto">
+              <div
+                class="user-review text-center italic bg-primary text-contrast rounded shadow-lg py-5 px-4 px-lg-6"
+              >
+                <blockquote class="regular py-4">
+                  <fa-icon [icon]="fa.quoteLeft" class="quote"></fa-icon>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aliquid amet aspernatur, autem deserunt distinctio dolores
+                  eius, exercitationem facilis inventore.
+                </blockquote>
+
+                <div class="author mt-4">
+                  <p class="small">
+                    <span class="bold text-contrast">{{ review.author }},</span>
+                    Web Developer
+                  </p>
+
+                  <img
+                    src="assets/img/v6/reviews/signature.svg"
+                    class="img-responsive signature mx-auto"
+                    alt="..."
+                  />
+                </div>
+
+                <div class="shape-wrapper" data-aos="fade-up">
+                  <svg
+                    class="svg-review-bottom"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M95,0 Q90,90 0,100 L100,100 100,0 Z"
+                      fill="#8B41EB"
+                    ></path>
+                  </svg>
+
+                  <svg
+                    class="svg-review-bottom back"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M95,0 Q90,90 0,100 L100,100 100,0 Z"
+                      fill="#DC92FF"
+                    ></path>
+                  </svg>
+
+                  <svg
+                    class="svg-review-bottom back left"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M95,0 Q90,90 0,100 L100,100 100,0 Z"
+                      fill="#A45AFF"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Arrows -->
+      <div class="reviews-navigation">
+        <div
+          class="reviews-nav reviews-nav-prev btn btn-light btn-rounded shadow-box shadow-hover"
+        >
+          <fa-icon
+            [icon]="fa.longArrowAltLeft"
+            class="reviews-nav-icon"
+          ></fa-icon>
+        </div>
+
+        <div
+          class="reviews-nav reviews-nav-next btn btn-light btn-rounded shadow-box shadow-hover"
+        >
+          <fa-icon
+            [icon]="fa.longArrowAltRight"
+            class="reviews-nav-icon"
+          ></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

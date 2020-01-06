@@ -1,0 +1,56 @@
+<section class="section bg-primary">
+  <div class="container bring-to-front">
+    <div class="section-heading text-center text-contrast">
+      <h2 class="text-contrast">Delivering tools for success</h2>
+      <p class="text-contrast">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur
+        dicta nulla officia quaerat ratione reiciendis soluta. Accusamus
+        delectus dolore doloribus ducimus eveniet magnam, molestias nostrum
+        quas, quos, reiciendis ut!
+      </p>
+    </div>
+
+    <div class="p-4 bg-contrast shadow-lg rounded">
+      <div class="row align-items-center">
+        <div class="col-md-5 mr-md-auto">
+          <nav
+            id="sw-nav-shadow"
+            class="nav flex-md-column nav-pills nav-fill nav-pills-light"
+          >
+            <a
+              href="javascript:;"
+              *ngFor="let element of elements; let i = index"
+              class="nav-item text-left nav-link py-3 my-2"
+              [class.active]="i === currentSlide"
+              (click)="updateSlider(i)"
+              [attr.data-step]="i + 1"
+            >
+              <h6 class="bold">{{ element.title }}</h6>
+              <p class="my-0 d-none d-md-block">{{ element.description }}</p>
+            </a>
+          </nav>
+        </div>
+
+        <div class="col-md-6">
+          <div class="device browser shadow-sm">
+            <div class="screen">
+              <swiper
+                class="mt-4 mt-md-0"
+                [index]="currentSlide"
+                (indexChange)="onIndexChange($event)"
+              >
+                <div class="swiper-slide" *ngFor="let element of elements">
+                  <img
+                    [src]="'assets/img/screens/dash/' + element.img + '.png'"
+                    class="img-responsive rounded-bottom"
+                    alt=""
+                  />
+                </div>
+              </swiper>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

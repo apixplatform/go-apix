@@ -1,0 +1,26 @@
+<div class="testimonials-slider">
+  <swiper [config]="config" class="swiper-container pb-5">
+    <div class="swiper-slide" *ngFor="let i of [1, 2, 3, 4]">
+      <div class="d-flex flex-column align-items-center">
+        <img
+          src="assets/img/avatar/{{ i }}.jpg"
+          alt=""
+          class="rounded-circle shadow mb-4"
+        />
+
+        <p class="w-75 lead mt-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+          asperiores consequatur cum distinctio, dolorem earum error esse ex
+          fugiat inventore maiores minima, non placeat praesentium quam quas ut,
+          vero voluptatem.
+        </p>
+
+        <hr class="w-50" />
+        <footer>
+          <cite class="bold text-primary text-capitalize">— Jane Doe,</cite>
+          <span class="small text-secondary mt-0">Awesome Company</span>
+        </footer>
+      </div>
+    </div>
+  </swiper>
+</div>

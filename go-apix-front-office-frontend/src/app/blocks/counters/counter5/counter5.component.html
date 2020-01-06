@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="container pt-0">
+    <div class="row gap-y pt-5">
+      <div class="col-6 col-md-3" *ngFor="let c of counters">
+        <div class="d-flex align-items-center">
+          <dc-feather
+            [name]="c.icon"
+            [iconClass]="'stroke-primary mr-2'"
+          ></dc-feather>
+          <span class="counter bold text-darker font-md" [countUp]="c.value">{{
+            c.value
+          }}</span>
+        </div>
+
+        <p class="text-secondary m-0">{{ c.title }}</p>
+      </div>
+    </div>
+  </div>
+</section>

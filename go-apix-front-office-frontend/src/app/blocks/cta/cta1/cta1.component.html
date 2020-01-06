@@ -1,0 +1,19 @@
+<section
+  class="section {{ background ? 'bg-' + background : '' }} {{
+    edge ? 'edge ' + edge : ''
+  }}"
+>
+  <div class="container pt-5">
+    <div class="d-flex align-items-center flex-column flex-md-row">
+      <div class="text-center text-md-left">
+        <p class="light mb-0 text-primary lead">Ready to get started?</p>
+        <h2 class="mt-0">Create an account now</h2>
+      </div>
+      <a
+        [routerLink]="['/auth/register']"
+        class="btn btn-primary btn-rounded mt-3 mt-md-0 ml-md-auto"
+        >Create DashCore account</a
+      >
+    </div>
+  </div>
+</section>

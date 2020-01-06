@@ -1,0 +1,100 @@
+<section class="section bg-light">
+  <div class="container bring-to-front">
+    <div class="row gap-y align-items-center">
+      <div class="col-md-6">
+        <div class="rounded bg-primary-gradient shadow">
+          <div class="d-flex flex-column align-items-center py-3">
+            <img
+              src="assets/img/bg/asset-1.svg"
+              class="img-responsive w-50"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="rounded shadow-box bg-contrast mt-3">
+          <div class="media align-items-center px-3">
+            <dc-feather
+              [name]="'bar-chart'"
+              [iconClass]="'stroke-primary'"
+              [class]="'mr-3'"
+            ></dc-feather>
+            <div class="media-body my-3 pl-3 b-l">
+              <p class="bold text-primary my-0">Admin template included</p>
+              <p class="my-0 text-secondary">
+                We've included a fully functional starter admin dashboard
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded shadow-box bg-contrast mt-3">
+          <div class="media align-items-center px-3">
+            <dc-feather
+              [name]="'smartphone'"
+              [iconClass]="'stroke-primary'"
+              [class]="'mr-3'"
+            ></dc-feather>
+            <div class="media-body my-3 pl-3 b-l">
+              <p class="bold text-primary my-0">
+                Powered with multiple starter apps
+              </p>
+              <p class="my-0 text-secondary">
+                It's awesome you to have a nice feature to show up
+              </p>
+
+              <hr class="my-3" />
+              <nav
+                id="sw-nav-1"
+                class="nav nav-tabs tabs-clean border-bottom-0"
+              >
+                <a
+                  class="nav-item nav-link py-0 d-flex flex-column align-items-center border-bottom-0"
+                  href="javascript:void(0)"
+                  [class.active]="i === currentSlide"
+                  [class.pl-md-0]="i === 0"
+                  [attr.data-step]="i + 1"
+                  (click)="updateSlider(i)"
+                  *ngFor="let element of elements; let i = index"
+                >
+                  <dc-feather
+                    [name]="element.icon"
+                    [size]="24"
+                    class="mr-2"
+                  ></dc-feather>
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 ml-md-auto text-center text-md-left">
+        <span class="rounded-pill shadow-box badge badge-info bold py-2 px-4"
+          >Simple and transparent</span
+        >
+
+        <h2 class="mt-3">Bring your application to life</h2>
+        <p class="text-secondary">
+          Dashcore includes an outstanding starter Admin Dashboard UI Interface.
+          With this feature you can start developing right away your web
+          application.
+        </p>
+
+        <hr />
+        <swiper [index]="currentSlide" (indexChange)="onIndexChange($event)">
+          <div class="swiper-slide" *ngFor="let element of elements">
+            <figure class="shadow-box">
+              <img
+                [src]="'assets/img/screens/dash/' + element.img + '.png'"
+                alt=""
+                class="img-responsive rounded"
+              />
+            </figure>
+            <p class="small text-center text-danger">Clean inbox UI design</p>
+          </div>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</section>

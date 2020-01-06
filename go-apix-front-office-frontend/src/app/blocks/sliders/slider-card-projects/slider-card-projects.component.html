@@ -1,0 +1,56 @@
+<section class="section features-carousel b-b">
+  <div class="container pt-0" [class.lift-up]="liftUp">
+    <div class="cards-wrapper">
+      <div class="swiper-container" [swiper]="config">
+        <div class="swiper-wrapper px-1">
+          <div
+            class="swiper-slide px-2 px-sm-1"
+            *ngFor="let feature of features; let i = index"
+          >
+            <div class="card border-0 shadow h-100">
+              <div class="card-body">
+                <div class="logo mx-auto my-3">
+                  <img
+                    [src]="'assets/img/v8/icons/' + (i + 1) + '.svg'"
+                    class="img-responsive"
+                    alt=""
+                  />
+                </div>
+
+                <hr class="w-50 mx-auto my-3" />
+
+                <p class="bold mt-4">
+                  {{ feature.title[0] }} {{ feature.title[1] }}
+                </p>
+                <p class="regular small text-secondary">
+                  {{ feature.description }}
+                </p>
+              </div>
+
+              <div
+                class="card-footer d-flex align-items-center justify-content-around"
+              >
+                <div class="roi">
+                  <p class="text-darker lead bold mb-0">1.5k</p>
+                  <p class="text-secondary small mt-0">New subscribers</p>
+                </div>
+                <a href="javascript:;">
+                  <fa-icon [icon]="infoCircle" size="2x"></fa-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Arrows -->
+        <div class="text-primary features-nav features-nav-next">
+          <span class="text-uppercase small">Next</span>
+          <fa-icon
+            [icon]="longArrowAltRight"
+            [class]="'features-nav-icon'"
+          ></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

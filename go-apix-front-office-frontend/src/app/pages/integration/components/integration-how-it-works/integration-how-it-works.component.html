@@ -1,0 +1,34 @@
+<section id="features" class="section how-it-works">
+  <div class="shapes-container">
+    <div class="shape shape-ring" data-aos="fade-right">
+      <div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2 class="bold">How it Works?</h2>
+      <p class="lead text-secondary">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nulla,
+        voluptates. Architecto eum minima necessitatibus quo reiciendis!
+      </p>
+    </div>
+
+    <div class="row gap-y text-center text-md-left">
+      <div class="col-md-4 py-4 text-center" *ngFor="let element of elements">
+        <div class="shapes-figure shapes-container">
+          <div class="shape shape-circle center-x"></div>
+        </div>
+        <figure class="mockup mb-4">
+          <img
+            [src]="'assets/img/integration/steps/' + element.icon + '.svg'"
+            class="mb-3 image-responsive"
+          />
+        </figure>
+
+        <h5 class="bold">{{ element.title }}</h5>
+        <p class="text-muted">{{ element.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

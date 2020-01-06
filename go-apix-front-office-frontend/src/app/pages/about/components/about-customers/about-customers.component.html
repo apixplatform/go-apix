@@ -1,0 +1,34 @@
+<!-- ./Customers -->
+<section class="section bg-contrast edge bottom-right">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2>Third party integration</h2>
+      <p class="text-secondary lead">
+        We use the latest trends because you deserve better
+      </p>
+    </div>
+
+    <ul class="list-unstyled d-flex flex-wrap justify-content-around">
+      <li
+        [attr.data-aos-easing]="'ease-in-out-cubic'"
+        [attr.data-aos]="image.aos"
+        [attr.data-aos-delay]="(image.image - 1) * 100"
+        *ngFor="let image of images"
+        class="shadow-box bg-light rounded-circle icon-xxl image-background contain mt-{{
+          image.margin
+        }}"
+        [style.background-image]="
+          'url(assets/img/logos/' + image.image + '.png)'
+        "
+      ></li>
+    </ul>
+
+    <div class="text-center mt-6">
+      <dc-feather [name]="'code'" [iconClass]="'stroke-primary'"></dc-feather>
+      <p class="text-primary">Are you a developer?</p>
+      <a [routerLink]="['/developers']" class="btn btn-rounded btn-primary"
+        >Review the specs</a
+      >
+    </div>
+  </div>
+</section>

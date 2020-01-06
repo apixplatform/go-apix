@@ -1,0 +1,27 @@
+<section class="section bg-light bg-light-gradient edge bottom-right">
+  <div class="container bring-to-front">
+    <div class="section-heading text-center">
+      <p class="rounded-pill py-2 px-4 bold badge badge-info">
+        Let's do business
+      </p>
+      <h2>What Dashcore template offers</h2>
+    </div>
+
+    <div class="row gap-y">
+      <div class="col-md-6" *ngFor="let card of cards">
+        <div
+          class="rounded bg-contrast shadow-box image-background off-left-background p-4 pl-6 pl-md-9"
+          [style.background-image]="
+            'url(assets/img/lcards/' + card.img + '.svg)'
+          "
+        >
+          <h3>{{ card.title }}</h3>
+          <p class="text-secondary mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+            eveniet nihil perspiciatis quia quidem quod ratione sapiente sint?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

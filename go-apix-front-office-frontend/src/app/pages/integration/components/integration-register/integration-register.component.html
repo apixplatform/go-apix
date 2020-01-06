@@ -1,0 +1,45 @@
+<section class="section">
+  <div class="container bring-to-front">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-6 order-md-last">
+        <div class="mb-5">
+          <p class="text-primary bold">Fill in the form</p>
+          <h2>Your success is our success</h2>
+
+          <p class="lead text-muted">
+            If you're looking to be part of the most suitable template, just
+            fill in the form, we're sure we can build great things together
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6" *ngFor="let feature of features">
+            <div class="d-flex align-items-center">
+              <div
+                class="icon-md center-flex rounded-circle bg-primary mt-1 mr-4"
+              >
+                <fa-icon [icon]="check" class="text-contrast"></fa-icon>
+              </div>
+
+              <p class="text-primary">{{ feature }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-5" data-aos="fade-right">
+        <div class="card shadow-lg">
+          <img
+            src="https://picsum.photos/500/300?random=1&gravity=south"
+            alt="..."
+            class="card-img-top"
+          />
+
+          <div class="card-body">
+            <dc-form-register-company></dc-form-register-company>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

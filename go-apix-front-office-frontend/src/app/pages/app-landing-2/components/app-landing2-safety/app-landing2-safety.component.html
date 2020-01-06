@@ -1,0 +1,61 @@
+<section class="section app-safety">
+  <div class="shapes-container">
+    <div class="shape shape-circle">
+      <div data-aos="fade-up-left"></div>
+    </div>
+    <div class="shape shape-ring shape-ring-2">
+      <div data-aos="fade-up-right" data-aos-delay="200"></div>
+    </div>
+    <div class="shape pattern pattern-dots"></div>
+  </div>
+
+  <div class="container">
+    <div class="row gap-y align-items-center">
+      <div class="col-md-5">
+        <div class="section-heading">
+          <p class="text-primary bold">Safety first</p>
+          <h2>You're in a secure company</h2>
+          <p class="lead text-muted">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut,
+            fugiat suscipit eaque excepturi porro perspiciatis alias adipisci
+            possimus. Ratione amet.
+          </p>
+        </div>
+
+        <div class="media pb-3" *ngFor="let item of items">
+          <div
+            class="bg-light p-3 rounded d-flex align-items-center justify-content-center mr-3"
+          >
+            <dc-feather
+              [name]="item.icon"
+              [iconClass]="'stroke-primary'"
+            ></dc-feather>
+          </div>
+          <div class="media-body">
+            <h5>{{ item.title }}</h5>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <div class="row gap-y align-items-center text-center">
+          <div
+            class="col-md-4 {{ card.class }}"
+            *ngFor="let card of cards; let i = index"
+          >
+            <div class="figure shadow rounded overflow-hidden border">
+              <img
+                class="img-responsive"
+                [src]="
+                  'https://picsum.photos/300/600?random=' + i + '&gravity=south'
+                "
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

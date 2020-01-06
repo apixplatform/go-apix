@@ -1,0 +1,36 @@
+<section class="section">
+  <div class="shape-wrapper" *ngIf="imgShape">
+    <img
+      [src]="imgShape"
+      class="absolute top h-100 {{ isScreenLeft() ? 'left' : 'right' }}"
+      alt="..."
+    />
+  </div>
+
+  <div class="container-wide bring-to-front">
+    <ng-content select="[section-heading]"></ng-content>
+
+    <div class="row gap-y align-items-center text-center text-lg-left">
+      <div
+        class="col-10 col-lg-4 mx-auto"
+        [class.order-md-last]="isScreenLeft()"
+      >
+        <ng-content></ng-content>
+      </div>
+
+      <div class="col-12 col-lg-6 p{{ isScreenLeft() ? 'l' : 'r' }}-0">
+        <img
+          [src]="img"
+          alt=""
+          class="img-responsive shadow"
+          [attr.data-aos]="'fade-' + (isScreenLeft() ? 'right' : 'left')"
+          *ngIf="img; else iContent"
+        />
+
+        <ng-template #iContent>
+          <ng-content select="[images]"></ng-content>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>

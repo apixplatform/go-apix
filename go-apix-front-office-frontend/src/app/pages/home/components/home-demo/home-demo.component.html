@@ -1,0 +1,41 @@
+<div class="card card-demo card--blog shadow-box border-0">
+  <div class="card-body d-flex align-items-center">
+    <span class="is-new badge badge-danger badge-pill" *ngIf="demo.new"
+      >New</span
+    >
+
+    <h4 class="card-title mb-0 text-capitalize">{{ demo.title }}</h4>
+
+    <nav class="btn-group ml-auto">
+      <span *ngIf="!demo.soon; else soon">
+        <a
+          [routerLink]="['/' + url.link]"
+          target="_blank"
+          class="btn btn-{{ demo.btn.class }} btn-rounded px-3 shadow-none"
+          *ngFor="let url of demo.urls"
+          #link
+        >
+          <fa-icon [icon]="url.icon" class="mr-2"></fa-icon>
+          <span class="demo-link-text">{{ url.text }}</span>
+        </a>
+      </span>
+      <ng-template #soon>
+        Coming Soon
+      </ng-template>
+    </nav>
+  </div>
+
+  <figure class="preview-blanket m-0">
+    <div class="preview-pane">
+      <div class="preview-page">
+        <ngx-simplebar>
+          <img
+            class="card-img-bottom img-responsive"
+            src="assets/img/demo/screen/{{ demo.cover }}.png"
+            alt=""
+          />
+        </ngx-simplebar>
+      </div>
+    </div>
+  </figure>
+</div>

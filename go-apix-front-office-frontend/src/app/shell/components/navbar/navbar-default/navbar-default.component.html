@@ -1,0 +1,122 @@
+<dc-navbar-shell
+  [darkLinks]="darkLinks"
+  [useOnlyDarkLogo]="darkLinks ? true : useOnlyDarkLogo"
+>
+  <!-- <ul class="nav navbar-nav" [class.ml-auto]="isRightPositioned()">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/home']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/about']">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/faqs']">Faqs</a>
+    </li>
+
+    <li
+      class="nav-item dropdown mega"
+      ngbDropdown
+      placement="bottom left right"
+    >
+      <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:;"
+        >Demos</a
+      >
+      <div class="dropdown-menu dropdown-menu-right p-3" ngbDropdownMenu>
+        <div class="row">
+          <div class="col-md-4">
+            <p class="dropdown-heading bold mt-0 pt-0">Company</p>
+            <a class="dropdown-item" [routerLink]="['/app-landing']"
+              >App Landing</a
+            >
+            <a class="dropdown-item" [routerLink]="['/app-landing-2']"
+              >App Landing 2</a
+            >
+            <a class="dropdown-item" [routerLink]="['/automate-social']"
+              >Marketing</a
+            >
+          </div>
+
+          <div class="col-md-4">
+            <p class="dropdown-heading bold mt-0 pt-0">Product</p>
+            <a class="dropdown-item" [routerLink]="['/corporate']">Corporate</a>
+            <a class="dropdown-item" [routerLink]="['/developers']"
+              >Developers</a
+            >
+            <a class="dropdown-item" [routerLink]="['/online-payments']"
+              >Payments</a
+            >
+          </div>
+
+          <div class="col-md-4">
+            <p class="dropdown-heading bold mt-0 pt-0">Services</p>
+            <a class="dropdown-item" [routerLink]="['/integration']"
+              >Integration</a
+            >
+            <a class="dropdown-item" [routerLink]="['/saas']">Saas</a>
+            <a class="dropdown-item" [routerLink]="['/startup']">Startup</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown mega" ngbDropdown placement="bottom-right">
+      <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:;"
+        >Product</a
+      >
+
+      <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 b-md-r">
+              <a class="dropdown-item text-wrap" href="javascript:;">
+                <p class="bold my-0">For Designers</p>
+                <p class="my-0 small">Awesome design blocks</p>
+              </a>
+              <a class="dropdown-item text-wrap" [routerLink]="['developers']">
+                <p class="bold my-0">For Developers</p>
+                <p class="my-0 small">The developers' place</p>
+              </a>
+            </div>
+            <div class="col-md-8">
+              <h3 class="text-darker mb-0 light mt-4 mt-md-0">
+                Think about<span class="bold d-block">your business</span>
+              </h3>
+              <p class="text-secondary">
+                Our best bet is you, we can ensure that our template will fit
+                most of your needs.
+              </p>
+              <a
+                [routerLink]="['pricing']"
+                class="btn btn-rounded btn-info mt-3"
+                >View plan &amp; prices</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul> -->
+
+  <nav
+    class="nav navbar-nav justify-content-center mt-4 mt-md-0 flex-row"
+    [ngClass]="{ 'ml-md-auto': !isRightPositioned() }"
+  >
+    <a class="btn btn-rounded btn-outline mr-3 px-3" [href]="onlineBankingUrl">
+      <fa-icon
+        [icon]="signInAlt"
+        class="d-none d-md-inline mr-md-0 mr-lg-2"
+      ></fa-icon>
+      <span class="d-md-none d-lg-inline">Login</span>
+    </a>
+    <button
+      class="btn btn-white"
+      [routerLink]="['/account-opening/validate-id']"
+      routerLinkActive="router-link-active"
+    >
+      Create Account
+    </button>
+  </nav>
+</dc-navbar-shell>

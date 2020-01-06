@@ -1,0 +1,94 @@
+<dc-saas-heading></dc-saas-heading>
+<dc-saas-perspective-mockups></dc-saas-perspective-mockups>
+<dc-saas-lightweight-template></dc-saas-lightweight-template>
+<dc-slider-start-right-way></dc-slider-start-right-way>
+<dc-slider-all-in-one></dc-slider-all-in-one>
+<dc-testimonial-simple-text-left></dc-testimonial-simple-text-left>
+<dc-big-screen [img]="'assets/img/screens/dash/2.png'">
+  <div class="section-heading text-center" section-heading>
+    <p class="rounded-pill py-2 px-4 bold badge badge-info">Built to Last</p>
+    <h2>What you will get with Dashcore</h2>
+    <p class="lead text-secondary">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna
+    </p>
+  </div>
+
+  <div class="row gap-y text-center text-md-left">
+    <div
+      class="col-md-6"
+      *ngFor="
+        let f of [
+          { icon: 'pie-chart', title: 'Dashboard' },
+          { icon: 'dollar-sign', title: 'Save money' },
+          { icon: 'sliders', title: 'Design tools' },
+          { icon: 'download', title: 'Updates' }
+        ]
+      "
+    >
+      <dc-feather
+        [name]="f.icon"
+        [iconClass]="'stroke-primary mb-3'"
+      ></dc-feather>
+      <p class="my-0 bold lead text-dark">{{ f.title }}</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed do eiusmod
+        tempor.
+      </p>
+    </div>
+  </div>
+</dc-big-screen>
+
+<dc-big-screen [screenPos]="'left'">
+  <div class="section-heading">
+    <span class="bold py-2">
+      <dc-feather
+        [name]="'bar-chart'"
+        [iconClass]="'stroke-primary mr-2'"
+      ></dc-feather>
+      <span class="bold text-info">Dashboard included</span>
+    </span>
+
+    <h2 class="mt-3">Every thing you need to get started</h2>
+
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna
+    </p>
+  </div>
+
+  <p>
+    Nullam vitae scelerisque est, sed tempus metus. Donec convallis volutpat
+    enim consequat viverra. Nam blandit est eu ipsum elementum, ac pellentesque
+    nibh placerat. Quisque venenatis pulvinar nulla, non vestibulum urna
+    ultrices accumsan.
+  </p>
+
+  <a href="#" class="btn px-4 btn-rounded btn-primary mt-4">Learn more</a>
+
+  <div class="device-twin align-items-center mt-4 mt-lg-0" images>
+    <div class="browser shadow" data-aos="fade-right">
+      <img src="assets/img/screens/dash/4.png" alt="..." />
+    </div>
+
+    <div
+      class="front iphone-x absolute d-none d-sm-block"
+      data-aos="fade-up"
+      data-aos-delay=".5"
+      style="right: 0; bottom: -1.5rem;"
+    >
+      <div class="screen">
+        <img src="assets/img/screens/app/1.png" alt="..." />
+      </div>
+
+      <div class="notch"></div>
+    </div>
+  </div>
+</dc-big-screen>
+
+<dc-trust-us [title]="'They trust us'" [containerClass]="'pb-0'"></dc-trust-us>
+<dc-faqs1 [edge]="'bottom-right'" [background]="'light'"></dc-faqs1>
+<dc-start-now-box></dc-start-now-box>
+<dc-cta1></dc-cta1>
+
+<dc-footer1></dc-footer1>

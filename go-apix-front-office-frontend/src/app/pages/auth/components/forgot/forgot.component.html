@@ -1,0 +1,24 @@
+<h1 class="text-darker bold">Forgot your password?</h1>
+<p class="text-secondary mt-0 mb-4 mb-md-6">
+  Enter your email bellow to retrieve your account or
+  <a [routerLink]="['../login']" class="text-primary bold">Login</a>
+</p>
+
+<form class="cozy" action="srv/login.php" data-validate-on="submit" novalidate>
+  <div class="form-group has-icon">
+    <input
+      type="text"
+      id="register_email"
+      class="form-control form-control-rounded"
+      placeholder="Your registered email"
+    />
+    <fa-icon [icon]="fa.envelope" class="icon"></fa-icon>
+  </div>
+
+  <div class="form-group d-flex align-items-center justify-content-between">
+    <button type="submit" class="btn btn-primary btn-rounded ml-auto">
+      Send reset link
+      <fa-icon [icon]="fa.longArrowAltRight" class="ml-2"></fa-icon>
+    </button>
+  </div>
+</form>

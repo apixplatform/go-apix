@@ -1,0 +1,53 @@
+<h1 class="text-darker bold">Register</h1>
+<p class="text-secondary mb-4 mb-md-6">
+  Already have an account?
+  <a [routerLink]="['../login']" class="text-primary bold">Login here</a>
+</p>
+
+<form class="cozy" action="srv/login.php" data-validate-on="submit" novalidate>
+  <div class="form-group has-icon">
+    <input
+      type="text"
+      id="register_username"
+      class="form-control form-control-rounded"
+      placeholder="Desired username"
+    />
+    <fa-icon [icon]="fa.userPlus" class="icon"></fa-icon>
+  </div>
+
+  <div class="form-group has-icon">
+    <input
+      type="text"
+      id="register_fullname"
+      class="form-control form-control-rounded"
+      placeholder="Full name"
+    />
+    <fa-icon [icon]="fa.addressCard" class="icon"></fa-icon>
+  </div>
+
+  <div class="form-group has-icon">
+    <input
+      type="text"
+      id="register_email"
+      class="form-control form-control-rounded"
+      placeholder="Valid email"
+    />
+    <fa-icon [icon]="fa.envelope" class="icon"></fa-icon>
+  </div>
+
+  <div class="form-group has-icon">
+    <input
+      type="password"
+      id="register_password"
+      class="form-control form-control-rounded"
+      placeholder="Password"
+    />
+    <fa-icon [icon]="fa.lock" class="icon"></fa-icon>
+  </div>
+
+  <div class="form-group d-flex align-items-center justify-content-between">
+    <button type="submit" class="btn btn-primary btn-rounded ml-auto">
+      Register <fa-icon [icon]="fa.longArrowAltRight" class="ml-2"></fa-icon>
+    </button>
+  </div>
+</form>
